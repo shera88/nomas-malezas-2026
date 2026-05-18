@@ -24,3 +24,6 @@ Thumbs.db
 # Temp
 /tmp/
 *.log
+
+# Playwright MCP browser session debris (yml + log)
+.playwright-mcp/
