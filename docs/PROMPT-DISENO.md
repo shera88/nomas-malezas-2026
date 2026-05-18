@@ -109,12 +109,12 @@ Hay 3 JPEGs en `oradores/` (de WhatsApp, requieren post-procesado: recorte cuadr
 - **No** Soft UI, **no** gradientes etéreos, **no** neumorphism, **no** glassmorphism saturado. Una pizca de glassmorphism solo en navbar/CTA flotante.
 - Tono visual: serio, técnico-aspiracional, no infantil, no genérico tech-startup.
 
-### Colors (alineado con los PNGs entregados — paleta REAL del evento)
+### Colors (LOCKED — source of truth: PDF "PROYECTO MAINTER 2026 - BRUJULA")
 
 ```css
 :root {
-  /* Fondos — extraídos del fondo-tile-200x200.png entregado */
-  --bg-deep:        #1B0E48;  /* azul violáceo profundo, fondo base del evento */
+  /* Fondos */
+  --bg-deep:        #1B0E48;  /* azul violáceo profundo (extraído del fondo entregado) */
   --bg-elevated:    #2A1B65;  /* cards y secciones elevadas */
   --bg-surface:     #3A2680;  /* surfaces interactivas */
 
@@ -128,11 +128,11 @@ Hay 3 JPEGs en `oradores/` (de WhatsApp, requieren post-procesado: recorte cuadr
   --gold-soft:      #FCD566;
   --gold-deep:      #C99421;
 
-  /* 4 Cardinales (extraídos de logo-letra-*.png — paleta REAL) */
-  --norte-verde:    #A7C44A;  /* NORTE · Barbecho · Ultracheval · Bolivia */
-  --este-amarillo:  #F1C40F;  /* ESTE · Pre-emergente · ZethaMaxx · Brasil */
-  --sur-rojo:       #E74C3C;  /* SUR · Post-emergente · Balón · Argentina */
-  --oeste-cian:     #3DBCB0;  /* OESTE · Resistentes · Apresa · Paraguay */
+  /* 4 Cardinales (PDF brújula, lockeado) */
+  --norte-verde:    #27AE60;  /* NORTE · Barbecho · Ultracheval · Pedro Christoffoleti · 🇧🇷 Brasil */
+  --este-azul:      #2E86DE;  /* ESTE · Pre-emergente · ZethaMaxx · Lucas Paterlini · 🇦🇷 Argentina */
+  --sur-rojo:       #E74C3C;  /* SUR · Post-emergente · Balón · (Paraguay, disertante pendiente) · 🇵🇾 */
+  --oeste-amarillo: #F1C40F;  /* OESTE · Resistentes · Apresa · Pablo Franco · 🇧🇴 Bolivia */
 
   /* Auxiliares */
   --border-subtle:  rgba(255,255,255,0.10);
@@ -142,16 +142,12 @@ Hay 3 JPEGs en `oradores/` (de WhatsApp, requieren post-procesado: recorte cuadr
 }
 ```
 
-⚠️ **OJO mapping disertantes ↔ países**: en el PDF dice una asignación, en los PNGs banderas dice OTRA. **Confirmar con cliente** la final. Las opciones detectadas:
-
-| Cardinal | Color (PNG) | País bandera (PNG) | País disertante (PDF) | Disertante (DOCX) |
-|---|---|---|---|---|
-| N | Verde lima | **Bolivia** 🇧🇴 | Brasil 🇧🇷 | Pedro Christoffoleti (BR) |
-| E | Amarillo | **Brasil** 🇧🇷 | Argentina 🇦🇷 | Lucas Paterlini (AR) |
-| S | Rojo coral | **Argentina** 🇦🇷 | Paraguay 🇵🇾 | (PY pendiente nombre) |
-| O | Cian turquesa | **Paraguay** 🇵🇾 | Bolivia 🇧🇴 | Pablo Franco (BO) |
-
-Mientras se confirma, **respetar paleta de colores de los PNGs** y dejar bandera+nombre disertante como variables editables.
+| Cardinal | Color | Tema | Producto | Disertante | País |
+|---|---|---|---|---|---|
+| **N** | Verde `#27AE60` | Manejo de Barbecho | Ultracheval | Pedro Christoffoleti | 🇧🇷 Brasil |
+| **E** | Azul `#2E86DE` | Pre-emergente | ZethaMaxx | Lucas Paterlini | 🇦🇷 Argentina |
+| **S** | Rojo `#E74C3C` | Post-emergente | Balón | (pendiente) | 🇵🇾 Paraguay |
+| **O** | Amarillo `#F1C40F` | Malezas Resistentes | Apresa | Pablo Franco | 🇧🇴 Bolivia |
 
 **Reglas de uso color**:
 - Cada cardinal SOLO en su sección/card propia + entrada digital del participante de ese tipo

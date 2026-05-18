@@ -7,22 +7,17 @@
 
 ## 🔴 Bloqueantes — necesito YA para empezar
 
-### 1. WordPress de MAINTER
+### 1. ✅ WordPress de MAINTER — RECIBIDO
 
 ```yaml
-# Pegame en chat así:
 wordpress_mainter:
-  admin_url:    https://___________________/wp-admin
-  usuario:      ___________________
-  password:     ___________________
-  # Yo genero la Application Password después de loguearme con vos vía Playwright
+  admin_url:    https://mainter.com.bo/wp-admin  # ASUMIDO — confirmar
+  usuario:      Nicole
+  password:     6heQIC!Xwi1O2ATu3!(JMAK&
+  # Application Password: genero yo después vía Playwright + perfil WP
 ```
 
-**Cómo obtener si no tenés**:
-1. Pediselo a tu contacto en MAINTER por WhatsApp
-2. Diles: "necesito acceso de Administrador a `mainter.com.bo/wp-admin` para subir una página personalizada del evento No Más Malezas. Generaré una Application Password limitada que no requiere tu password normal después."
-
-**Riesgo bajo**: voy a generar una Application Password (token limitado) y descartar el password normal. Si después quieren revocarme acceso, lo borran en 1 click.
+**Pendiente confirmar**: ¿URL admin es `mainter.com.bo/wp-admin` o tiene otro path custom? Si abrís WP regular en navegador me decís.
 
 ---
 
@@ -78,7 +73,7 @@ disertante_sur_paraguay:
   foto_url: ___________________  # opcional, podemos usar placeholder
 ```
 
-### 5. ✅ Assets gráficos — YA TENGO
+### 5. ✅ Assets gráficos — COMPLETO
 
 Encontré en `Ilustrator/elementos/`:
 - ✅ logo NMM principal con brújula
@@ -88,91 +83,33 @@ Encontré en `Ilustrator/elementos/`:
 - ✅ Banderas Bolivia/Brasil/Argentina/Paraguay
 - ✅ Fondo topográfico tile
 
-**Pendiente**: logos sponsors para footer.
+✅ Sponsors en `sponsors/`:
+- `logo-rodaria.png`
+- `ZNA.png`
+- `Tramontina-Logo-New.png`
+- `cropped-logo-gran-alimento-png-6.webp`
 
-```yaml
-sponsors_footer:
-  - nombre: Rodaria
-    logo_url: ___________________  # PNG transparente, ideal
-  - nombre: ZNA
-    logo_url: ___________________
-  - nombre: Tramontina
-    logo_url: ___________________
-  - nombre: Gran Alimento
-    logo_url: ___________________
-```
+### 6. ✅ Mapping LOCKED (basado en PDF según indicación user)
 
-### 6. ⚠️ Confirmar mapping color↔cardinal↔país↔disertante
+| Cardinal | Color | Tema | Producto | Disertante | País |
+|---|---|---|---|---|---|
+| **N** | Verde `#27AE60` | Manejo de Barbecho | Ultracheval | Pedro Christoffoleti | 🇧🇷 Brasil |
+| **E** | Azul `#2E86DE` | Pre-emergente | ZethaMaxx | Lucas Paterlini | 🇦🇷 Argentina |
+| **S** | Rojo `#E74C3C` | Post-emergente | Balón | **(pendiente)** | 🇵🇾 Paraguay |
+| **O** | Amarillo `#F1C40F` | Malezas Resistentes | Apresa | Pablo Franco | 🇧🇴 Bolivia |
 
-**Hay conflicto** entre PDF "Brújula" y PNGs entregados:
+**Pendiente único**: nombre + foto disertante Paraguay. Mientras tanto se duplica foto de otro orador como placeholder.
 
-| Cardinal | Color en PNG | Bandera en PNG | País disertante (PDF) | Disertante (DOCX) |
-|---|---|---|---|---|
-| **N** | Verde lima | 🇧🇴 Bolivia | Brasil | Pedro Christoffoleti (BR) |
-| **E** | Amarillo | 🇧🇷 Brasil | Argentina | Lucas Paterlini (AR) |
-| **S** | Rojo coral | 🇦🇷 Argentina | Paraguay | (pendiente) |
-| **O** | Cian turquesa | 🇵🇾 Paraguay | Bolivia | Pablo Franco (BO) |
+### 7. ✅ Fotos oradores — identificadas, en proceso retrato profesional
 
-**Confirmá con MAINTER**:
+| JPEG | Disertante | Cardinal | Estado retrato Higgsfield |
+|---|---|---|---|
+| `23.38.27.jpeg` | Pedro Christoffoleti (🇧🇷) | N · Barbecho | En proceso |
+| `23.38.28.jpeg` | Lucas Paterlini (🇦🇷) | E · Pre-emergente | En proceso |
+| `23.38.28 (1).jpeg` | Pablo Franco (🇧🇴) | O · Resistentes | En proceso |
+| (placeholder) | Disertante Paraguay (pendiente nombre) | S · Post-emergente | Reusar uno temp |
 
-```yaml
-mapping_final:
-  norte:
-    color:       [verde lima / verde mainter] # cuál usar
-    bandera:     ___________________
-    disertante:  ___________________
-    tema:        Manejo de Barbecho
-    producto:    Ultracheval
-
-  este:
-    color:       [amarillo / azul]
-    bandera:     ___________________
-    disertante:  ___________________
-    tema:        Pre-emergente
-    producto:    ZethaMaxx
-
-  sur:
-    color:       [rojo]
-    bandera:     ___________________
-    disertante:  ___________________  # ← falta nombre, era "______ Paraguay"
-    tema:        Post-emergente
-    producto:    Balón
-
-  oeste:
-    color:       [cian turquesa / amarillo]
-    bandera:     ___________________
-    disertante:  ___________________
-    tema:        Malezas Resistentes
-    producto:    Apresa
-```
-
-### 7. 📸 Identificar fotos de oradores
-
-Hay 3 JPEGs en `oradores/`. Ayudame a asignar:
-
-```yaml
-oradores_identificacion:
-  WhatsApp_Image_23.38.27.jpeg:  # Hombre mayor, lentes, sonriendo, fondo rojo "2"
-    nombre:    ___________________
-    pais:      ___________________
-    cardinal:  ___________________
-
-  WhatsApp_Image_23.38.28.jpeg:   # Hombre joven, calvo, barba, en campo de soya
-    nombre:    ___________________
-    pais:      ___________________
-    cardinal:  ___________________
-
-  WhatsApp_Image_23.38.28_1.jpeg: # Hombre, polo marrón, fondo verde BASF
-    nombre:    ___________________
-    pais:      ___________________
-    cardinal:  ___________________
-
-  cuarto_orador:                  # el de Paraguay, falta foto + nombre
-    nombre:    ___________________
-    pais:      Paraguay
-    cardinal:  ___________________
-    foto:      ___________________
-```
+Higgsfield genera nuevos retratos: **traje elegante + fondo blanco/transparente + rasgos faciales 100% mantenidos**.
 
 ### 7. URL final de la página
 
