@@ -1,0 +1,2 @@
+id,creado_at,nombre,tipo,contexto,whatsapp,email,color,punto,sector,qr_payload,email_enviado_at,escaneado_at,user_agent
+7f3a9b2c-4d5e-4abc-9def-1234567890ab,2026-05-20 14:32:01,Juan Pérez García,estudiante,Universidad Mayor de San Andrés,59171234567,juan@example.com,azul,E,Pre-emergente · ZethaMaxx,"{""id"":""7f3a9b2c"",""n"":""Juan Pérez García"",""t"":""estudiante"",""c"":""azul""}",2026-05-20 14:32:05,,Mozilla/5.0 (Linux; Android 13)

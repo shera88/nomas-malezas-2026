@@ -1,0 +1,1342 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Menú principal":
+      - link "Saltar al contenido principal" [ref=e3] [cursor=pointer]:
+        - /url: "#wpbody-content"
+      - link "Ir a la barra de herramientas" [ref=e4] [cursor=pointer]:
+        - /url: "#wp-toolbar"
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Escritorio" [ref=e9] [cursor=pointer]:
+            - /url: index.php
+            - generic [ref=e10]: 
+            - generic [ref=e11]: Escritorio
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Inicio" [ref=e14] [cursor=pointer]:
+                - /url: index.php
+            - listitem [ref=e15]:
+              - link "Actualizaciones 19" [ref=e16] [cursor=pointer]:
+                - /url: update-core.php
+                - text: Actualizaciones
+                - generic [ref=e17]: "19"
+            - listitem [ref=e18]:
+              - link "Insights" [ref=e19] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_reports
+            - listitem [ref=e20]:
+              - link "Marketing Education" [ref=e21] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=optin-monster-university
+        - listitem [ref=e22]
+        - listitem [ref=e24]:
+          - link "Entradas" [ref=e25] [cursor=pointer]:
+            - /url: edit.php
+            - generic [ref=e26]: 
+            - generic [ref=e27]: Entradas
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - link "Todas las entradas" [ref=e30] [cursor=pointer]:
+                - /url: edit.php
+            - listitem [ref=e31]:
+              - link "Agregar nueva" [ref=e32] [cursor=pointer]:
+                - /url: post-new.php
+            - listitem [ref=e33]:
+              - link "Categorías" [ref=e34] [cursor=pointer]:
+                - /url: edit-tags.php?taxonomy=category
+            - listitem [ref=e35]:
+              - link "Etiquetas" [ref=e36] [cursor=pointer]:
+                - /url: edit-tags.php?taxonomy=post_tag
+        - listitem [ref=e37]:
+          - link "Multimedia" [ref=e38] [cursor=pointer]:
+            - /url: upload.php
+            - generic [ref=e39]: 
+            - generic [ref=e40]: Multimedia
+          - list [ref=e41]:
+            - listitem [ref=e42]:
+              - link "Biblioteca" [ref=e43] [cursor=pointer]:
+                - /url: upload.php
+            - listitem [ref=e44]:
+              - link "Agregar nuevo" [ref=e45] [cursor=pointer]:
+                - /url: media-new.php
+        - listitem [ref=e46]:
+          - link "Enlaces" [ref=e47] [cursor=pointer]:
+            - /url: link-manager.php
+            - generic [ref=e48]: 
+            - generic [ref=e49]: Enlaces
+          - list [ref=e50]:
+            - listitem [ref=e51]:
+              - link "Todos los enlaces" [ref=e52] [cursor=pointer]:
+                - /url: link-manager.php
+            - listitem [ref=e53]:
+              - link "Agregar nuevo" [ref=e54] [cursor=pointer]:
+                - /url: link-add.php
+            - listitem [ref=e55]:
+              - link "Categorías de enlaces" [ref=e56] [cursor=pointer]:
+                - /url: edit-tags.php?taxonomy=link_category
+        - listitem [ref=e57]:
+          - link "Páginas" [ref=e58] [cursor=pointer]:
+            - /url: edit.php?post_type=page
+            - generic [ref=e59]: 
+            - generic [ref=e60]: Páginas
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Todas las páginas" [ref=e63] [cursor=pointer]:
+                - /url: edit.php?post_type=page
+            - listitem [ref=e64]:
+              - link "Agregar nueva" [ref=e65] [cursor=pointer]:
+                - /url: post-new.php?post_type=page
+        - listitem [ref=e66]:
+          - link "Comentarios" [ref=e67] [cursor=pointer]:
+            - /url: edit-comments.php
+            - generic [ref=e68]: 
+            - generic [ref=e69]: Comentarios
+        - listitem [ref=e70]:
+          - link "OptinMonster 2" [ref=e71] [cursor=pointer]:
+            - /url: admin.php?page=optin-monster-dashboard
+            - generic [ref=e73]:
+              - text: OptinMonster
+              - generic [ref=e74]: "2"
+          - list [ref=e75]:
+            - listitem [ref=e76]:
+              - link "Dashboard" [ref=e77] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-dashboard
+            - listitem [ref=e78]:
+              - link "Campaigns" [ref=e79] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-campaigns
+            - listitem [ref=e80]:
+              - link "Templates" [ref=e81] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-templates
+            - listitem [ref=e82]:
+              - link "Playbooks" [ref=e83] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-playbooks
+            - listitem [ref=e84]:
+              - link "Subscribers" [ref=e85] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-monsterleads
+            - listitem [ref=e86]:
+              - link "Integrations" [ref=e87] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-integrations
+            - listitem [ref=e88]:
+              - link "Settings" [ref=e89] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-settings
+            - listitem [ref=e90]:
+              - link "Personalization" [ref=e91] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-personalization
+            - listitem [ref=e92]:
+              - link "University" [ref=e93] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-university
+            - listitem [ref=e94]:
+              - link "Social Proof Widget" [ref=e95] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-trustpulse
+            - listitem [ref=e96]:
+              - link "Landing Pages" [ref=e97] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-seedprod
+            - listitem [ref=e98]:
+              - link "About Us" [ref=e99] [cursor=pointer]:
+                - /url: admin.php?page=optin-monster-about
+            - listitem [ref=e100]:
+              - link "Upgrade to Pro" [ref=e101] [cursor=pointer]:
+                - /url: https://app.optinmonster.com/?redirect_to=https%3A%2F%2Fapp.optinmonster.com%2Faccount%2Fwp-upgrade%2F%3Futm_source%3DWordPress%26utm_medium%3DpluginMenu%26utm_campaign%3DPlugin%26feature%3Dnone%26return%3Dhttps%253A%252F%252Fwww.mainter.com.bo%252Fwp-admin%252Fadmin.php%253Fpage%253Doptin-monster-dashboard
+        - listitem [ref=e102]:
+          - link "Contacto 1" [ref=e103] [cursor=pointer]:
+            - /url: admin.php?page=wpcf7
+            - generic [ref=e104]: 
+            - generic [ref=e105]:
+              - text: Contacto
+              - generic [ref=e106]: "1"
+          - list [ref=e107]:
+            - listitem [ref=e108]:
+              - link "Formularios de contacto 1" [ref=e109] [cursor=pointer]:
+                - /url: admin.php?page=wpcf7
+                - text: Formularios de contacto
+                - generic [ref=e110]: "1"
+            - listitem [ref=e111]:
+              - link "Agregar nuevo" [ref=e112] [cursor=pointer]:
+                - /url: admin.php?page=wpcf7-new
+            - listitem [ref=e113]:
+              - link "Integración" [ref=e114] [cursor=pointer]:
+                - /url: admin.php?page=wpcf7-integration
+        - listitem [ref=e115]:
+          - link "Widgetkit" [ref=e116] [cursor=pointer]:
+            - /url: admin.php?page=widgetkit
+            - generic [ref=e118]: Widgetkit
+        - listitem [ref=e119]:
+          - link "Avion" [ref=e120] [cursor=pointer]:
+            - /url: admin.php?page=warp
+            - generic [ref=e122]: Avion
+        - listitem [ref=e123]:
+          - link "RafflePress" [ref=e124] [cursor=pointer]:
+            - /url: admin.php?page=rafflepress_lite
+            - generic [ref=e126]: RafflePress
+          - list [ref=e127]:
+            - listitem [ref=e128]:
+              - link "Giveaways" [ref=e129] [cursor=pointer]:
+                - /url: admin.php?page=rafflepress_lite
+            - listitem [ref=e130]:
+              - link "Add New" [ref=e131] [cursor=pointer]:
+                - /url: admin.php?page=rafflepress_lite_add_new&_wpnonce=4c5fe0cf9f
+            - listitem [ref=e132]:
+              - link "Settings" [ref=e133] [cursor=pointer]:
+                - /url: admin.php?page=rafflepress_lite_settings
+            - listitem [ref=e134]:
+              - link "About Us" [ref=e135] [cursor=pointer]:
+                - /url: admin.php?page=rafflepress_lite_about_us
+            - listitem [ref=e136]:
+              - link "Get Pro" [ref=e137] [cursor=pointer]:
+                - /url: admin.php?page=rafflepress_lite_get_pro
+        - listitem [ref=e138]:
+          - link "WPForms" [ref=e139] [cursor=pointer]:
+            - /url: admin.php?page=wpforms-overview
+            - generic [ref=e141]: WPForms
+          - list [ref=e142]:
+            - listitem [ref=e143]:
+              - link "All Forms" [ref=e144] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-overview
+            - listitem [ref=e145]:
+              - link "Add New Form" [ref=e146] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-builder
+            - listitem [ref=e147]:
+              - link "Entries" [ref=e148] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-entries
+            - listitem [ref=e149]:
+              - link "Payments NEW!" [ref=e150] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-payments
+                - text: Payments
+                - generic [ref=e151]: NEW!
+            - listitem [ref=e152]:
+              - link "Form Templates" [ref=e153] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-templates
+            - listitem [ref=e154]:
+              - link "Settings" [ref=e155] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-settings
+            - listitem [ref=e156]:
+              - link "Tools" [ref=e157] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-tools
+            - listitem [ref=e158]:
+              - link "Addons" [ref=e159] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-addons
+            - listitem [ref=e160]:
+              - link "Privacy Compliance" [ref=e161] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-wpconsent
+            - listitem [ref=e162]:
+              - link "SMTP" [ref=e163] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-smtp
+            - listitem [ref=e164]:
+              - link "About Us" [ref=e165] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-about
+            - listitem [ref=e166]:
+              - link "Community" [ref=e167] [cursor=pointer]:
+                - /url: admin.php?page=wpforms-community
+            - listitem [ref=e168]:
+              - link "Upgrade to Pro" [ref=e169] [cursor=pointer]:
+                - /url: https://wpforms.com/lite-upgrade/?utm_campaign=liteplugin&utm_source=WordPress&utm_medium=admin-menu&utm_locale=es_AR&utm_content=Upgrade%20to%20Pro%20-%20wordfence_page_WordfenceWAF
+        - listitem [ref=e170]
+        - listitem [ref=e172]:
+          - link "Apariencia" [ref=e173] [cursor=pointer]:
+            - /url: themes.php
+            - generic [ref=e174]: 
+            - generic [ref=e175]: Apariencia
+          - list [ref=e176]:
+            - listitem [ref=e177]:
+              - link "Temas" [ref=e178] [cursor=pointer]:
+                - /url: themes.php
+            - listitem [ref=e179]:
+              - link "Personalizar" [ref=e180] [cursor=pointer]:
+                - /url: customize.php?return=%2Fwp-admin%2Fadmin.php%3Fpage%3DWordfenceWAF%26subpage%3Dwaf_options
+            - listitem [ref=e181]:
+              - link "Widgets" [ref=e182] [cursor=pointer]:
+                - /url: widgets.php
+            - listitem [ref=e183]:
+              - link "Menús" [ref=e184] [cursor=pointer]:
+                - /url: nav-menus.php
+            - listitem [ref=e185]:
+              - link "Popup Builder" [ref=e186] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=optin-monster-templates
+            - listitem [ref=e187]:
+              - link "Editor de archivos de temas" [ref=e188] [cursor=pointer]:
+                - /url: theme-editor.php
+        - listitem [ref=e189]:
+          - link "Plugins 18" [ref=e190] [cursor=pointer]:
+            - /url: plugins.php
+            - generic [ref=e191]: 
+            - generic [ref=e192]:
+              - text: Plugins
+              - generic [ref=e193]: "18"
+          - list [ref=e194]:
+            - listitem [ref=e195]:
+              - link "Plugins instalados" [ref=e196] [cursor=pointer]:
+                - /url: plugins.php
+            - listitem [ref=e197]:
+              - link "Agregar nuevo" [ref=e198] [cursor=pointer]:
+                - /url: plugin-install.php
+            - listitem [ref=e199]:
+              - link "Editor de archivos de plugins" [ref=e200] [cursor=pointer]:
+                - /url: plugin-editor.php
+        - listitem [ref=e201]:
+          - link "Usuarios" [ref=e202] [cursor=pointer]:
+            - /url: users.php
+            - generic [ref=e203]: 
+            - generic [ref=e204]: Usuarios
+          - list [ref=e205]:
+            - listitem [ref=e206]:
+              - link "Todos los usuarios" [ref=e207] [cursor=pointer]:
+                - /url: users.php
+            - listitem [ref=e208]:
+              - link "Agregar nuevo" [ref=e209] [cursor=pointer]:
+                - /url: user-new.php
+            - listitem [ref=e210]:
+              - link "Perfil" [ref=e211] [cursor=pointer]:
+                - /url: profile.php
+            - listitem [ref=e212]:
+              - link "Author SEO" [ref=e213] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo-search-appearance/#author-seo
+        - listitem [ref=e214]:
+          - link "Permissions" [ref=e215] [cursor=pointer]:
+            - /url: admin.php?page=presspermit-groups
+            - generic [ref=e216]: 
+            - generic [ref=e217]: Permissions
+          - list [ref=e218]:
+            - listitem [ref=e219]:
+              - link "Permissions" [ref=e220] [cursor=pointer]:
+                - /url: admin.php?page=presspermit-groups
+            - listitem [ref=e221]:
+              - link "Teaser" [ref=e222] [cursor=pointer]:
+                - /url: admin.php?page=presspermit-posts-teaser
+            - listitem [ref=e223]:
+              - link "Settings" [ref=e224] [cursor=pointer]:
+                - /url: admin.php?page=presspermit-settings
+            - listitem [ref=e225]:
+              - link "Upgrade to Pro" [ref=e226] [cursor=pointer]:
+                - /url: https://publishpress.com/links/permissions-menu
+        - listitem [ref=e227]:
+          - link "Herramientas" [ref=e228] [cursor=pointer]:
+            - /url: tools.php
+            - generic [ref=e229]: 
+            - generic [ref=e230]: Herramientas
+          - list [ref=e231]:
+            - listitem [ref=e232]:
+              - link "Herramientas disponibles" [ref=e233] [cursor=pointer]:
+                - /url: tools.php
+            - listitem [ref=e234]:
+              - link "Importar" [ref=e235] [cursor=pointer]:
+                - /url: import.php
+            - listitem [ref=e236]:
+              - link "Exportar" [ref=e237] [cursor=pointer]:
+                - /url: export.php
+            - listitem [ref=e238]:
+              - link "Salud del sitio 2" [ref=e239] [cursor=pointer]:
+                - /url: site-health.php
+                - text: Salud del sitio
+                - generic [ref=e240]: "2"
+            - listitem [ref=e241]:
+              - link "Exportar datos personales" [ref=e242] [cursor=pointer]:
+                - /url: export-personal-data.php
+            - listitem [ref=e243]:
+              - link "Borrar datos personales" [ref=e244] [cursor=pointer]:
+                - /url: erase-personal-data.php
+            - listitem [ref=e245]:
+              - link "Redirection Manager" [ref=e246] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo-redirects
+            - listitem [ref=e247]:
+              - link "Redirection" [ref=e248] [cursor=pointer]:
+                - /url: tools.php?page=redirection.php
+        - listitem [ref=e249]:
+          - link "Ajustes" [ref=e250] [cursor=pointer]:
+            - /url: options-general.php
+            - generic [ref=e251]: 
+            - generic [ref=e252]: Ajustes
+          - list [ref=e253]:
+            - listitem [ref=e254]:
+              - link "Generales" [ref=e255] [cursor=pointer]:
+                - /url: options-general.php
+            - listitem [ref=e256]:
+              - link "Escritura" [ref=e257] [cursor=pointer]:
+                - /url: options-writing.php
+            - listitem [ref=e258]:
+              - link "Lectura" [ref=e259] [cursor=pointer]:
+                - /url: options-reading.php
+            - listitem [ref=e260]:
+              - link "Comentarios" [ref=e261] [cursor=pointer]:
+                - /url: options-discussion.php
+            - listitem [ref=e262]:
+              - link "Multimedia" [ref=e263] [cursor=pointer]:
+                - /url: options-media.php
+            - listitem [ref=e264]:
+              - link "Enlaces permanentes" [ref=e265] [cursor=pointer]:
+                - /url: options-permalink.php
+            - listitem [ref=e266]:
+              - link "Privacidad" [ref=e267] [cursor=pointer]:
+                - /url: options-privacy.php
+            - listitem [ref=e268]:
+              - link "Akismet Anti-Spam" [ref=e269] [cursor=pointer]:
+                - /url: options-general.php?page=akismet-key-config
+            - listitem [ref=e270]:
+              - link "Google Analytics" [ref=e271] [cursor=pointer]:
+                - /url: options-general.php?page=ga-google-analytics
+            - listitem [ref=e272]:
+              - link "iframe" [ref=e273] [cursor=pointer]:
+                - /url: options-general.php?page=iframe-settings
+            - listitem [ref=e274]:
+              - link "Metricool" [ref=e275] [cursor=pointer]:
+                - /url: options-general.php?page=metricool
+            - listitem [ref=e276]:
+              - link "Meta" [ref=e277] [cursor=pointer]:
+                - /url: options-general.php?page=facebook_pixel_options
+            - listitem [ref=e278]:
+              - link "Advanced Editor Tools" [ref=e279] [cursor=pointer]:
+                - /url: options-general.php?page=tinymce-advanced
+            - listitem [ref=e280]:
+              - link "Big File Uploads" [ref=e281] [cursor=pointer]:
+                - /url: options-general.php?page=big_file_uploads
+            - listitem [ref=e282]:
+              - link "Widgetkit" [ref=e283] [cursor=pointer]:
+                - /url: options-general.php?page=widgetkit-config
+            - listitem [ref=e284]:
+              - link "PDF Embedder" [ref=e285] [cursor=pointer]:
+                - /url: options-general.php?page=pdfemb_list_options
+            - listitem [ref=e286]:
+              - link "Font Awesome" [ref=e287] [cursor=pointer]:
+                - /url: options-general.php?page=font-awesome
+            - listitem [ref=e288]:
+              - link "FacetWP" [ref=e289] [cursor=pointer]:
+                - /url: options-general.php?page=facetwp
+        - listitem [ref=e290]:
+          - link "All in One SEO" [ref=e291] [cursor=pointer]:
+            - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo&notifications=true
+            - generic [ref=e293]: All in One SEO
+          - list [ref=e294]:
+            - listitem [ref=e295]:
+              - link "Notifications" [ref=e296] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo&notifications=true
+                - text: Notifications
+            - listitem [ref=e298]:
+              - link "Dashboard" [ref=e299] [cursor=pointer]:
+                - /url: admin.php?page=aioseo
+            - listitem [ref=e300]:
+              - link "General Settings" [ref=e301] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-settings
+            - listitem [ref=e302]:
+              - link "Search Appearance" [ref=e303] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-search-appearance
+            - listitem [ref=e304]:
+              - link "Social Networks" [ref=e305] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-social-networks
+            - listitem [ref=e306]:
+              - link "Sitemaps" [ref=e307] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-sitemaps
+            - listitem [ref=e308]:
+              - link "Link Assistant" [ref=e309] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-link-assistant
+            - listitem [ref=e310]:
+              - link "Redirects" [ref=e311] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-redirects
+            - listitem [ref=e312]:
+              - link "AI Insights NEW!" [ref=e313] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-ai-insights
+                - text: AI Insights
+                - generic [ref=e314]: NEW!
+            - listitem [ref=e315]:
+              - link "Local SEO" [ref=e316] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-local-seo
+            - listitem [ref=e317]:
+              - link "SEO Analysis" [ref=e318] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-seo-analysis
+            - listitem [ref=e319]:
+              - link "Search Statistics" [ref=e320] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-search-statistics
+            - listitem [ref=e321]:
+              - link "Tools" [ref=e322] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-tools
+            - listitem [ref=e323]:
+              - link "Feature Manager" [ref=e324] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-feature-manager
+            - listitem [ref=e325]:
+              - link "About Us" [ref=e326] [cursor=pointer]:
+                - /url: admin.php?page=aioseo-about
+            - listitem [ref=e327]:
+              - link "Upgrade to Pro" [ref=e328] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo-tools&aioseo-redirect-upgrade=1
+        - listitem [ref=e329]:
+          - link "ACF" [ref=e330] [cursor=pointer]:
+            - /url: edit.php?post_type=acf-field-group
+            - generic [ref=e331]: 
+            - generic [ref=e332]: ACF
+          - list [ref=e333]:
+            - listitem [ref=e334]:
+              - link "Field Groups" [ref=e335] [cursor=pointer]:
+                - /url: edit.php?post_type=acf-field-group
+            - listitem [ref=e336]:
+              - link "Post Types" [ref=e337] [cursor=pointer]:
+                - /url: edit.php?post_type=acf-post-type
+            - listitem [ref=e338]:
+              - link "Taxonomies" [ref=e339] [cursor=pointer]:
+                - /url: edit.php?post_type=acf-taxonomy
+            - listitem [ref=e340]:
+              - link "Options Pages" [ref=e341] [cursor=pointer]:
+                - /url: edit.php?post_type=acf-field-group&page=acf_options_preview
+            - listitem [ref=e342]:
+              - link "Tools" [ref=e343] [cursor=pointer]:
+                - /url: edit.php?post_type=acf-field-group&page=acf-tools
+        - listitem [ref=e344]:
+          - link "Copy & Delete Posts" [ref=e345] [cursor=pointer]:
+            - /url: admin.php?page=copy-delete-posts
+            - generic [ref=e347]: Copy & Delete Posts
+        - listitem [ref=e348]
+        - listitem [ref=e350]:
+          - link "Custom Permalink Editor" [ref=e351] [cursor=pointer]:
+            - /url: admin.php?page=cp-editor
+            - generic [ref=e352]: 
+            - generic [ref=e353]: Custom Permalink Editor
+        - listitem [ref=e354]:
+          - link "Insights" [ref=e355] [cursor=pointer]:
+            - /url: admin.php?page=monsterinsights_settings#/setup-checklist
+            - generic [ref=e357]: Insights
+          - list [ref=e358]:
+            - listitem [ref=e359]:
+              - link "Setup Checklist 16" [ref=e360] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_settings#/setup-checklist
+                - text: Setup Checklist
+                - generic [ref=e361]: "16"
+            - listitem [ref=e362]:
+              - link "Reports" [ref=e363] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_overview_report
+            - listitem [ref=e364]:
+              - link "Settings" [ref=e365] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_settings
+            - listitem [ref=e366]:
+              - link "Site Notes" [ref=e367] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/site-notes
+            - listitem [ref=e368]:
+              - link "AI Insights" [ref=e369] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_reports#/ai-insights
+                - img [ref=e371]
+                - text: AI Insights
+            - listitem [ref=e373]:
+              - link "Conversations AI" [ref=e374] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_reports#/ai-insights/chat
+                - img [ref=e376]
+                - text: Conversations AI
+            - listitem [ref=e378]:
+              - link "Popular Posts" [ref=e379] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/popular-posts
+            - listitem [ref=e380]:
+              - link "User Journey" [ref=e381] [cursor=pointer]:
+                - /url: admin.php?page=monsterinsights_reports#/user-journey-report
+            - listitem [ref=e382]:
+              - link "SEO" [ref=e383] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo
+            - listitem [ref=e384]:
+              - link "Google Ads NEW" [ref=e385] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/google-ads
+                - text: Google Ads
+                - generic [ref=e386]: NEW
+            - listitem [ref=e387]:
+              - link "Tools" [ref=e388] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/tools
+            - listitem [ref=e389]:
+              - link "Addons" [ref=e390] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/addons
+                - generic [ref=e391]: Addons
+            - listitem [ref=e392]:
+              - link "UserFeedback NEW" [ref=e393] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/userfeedback
+                - text: UserFeedback
+                - generic [ref=e394]: NEW
+            - listitem [ref=e395]:
+              - link "Privacy Compliance" [ref=e396] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/wpconsent
+            - listitem [ref=e397]:
+              - link "About Us" [ref=e398] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/about
+            - listitem [ref=e399]:
+              - link "Upgrade to Pro" [ref=e400] [cursor=pointer]:
+                - /url: https://www.monsterinsights.com/lite/?utm_source=liteplugin&utm_medium=admin-menu&utm_campaign=submenu&utm_content=10.1.3
+                - generic [ref=e401]: Upgrade to Pro
+        - listitem [ref=e402]:
+          - link "Hide Titles" [ref=e403] [cursor=pointer]:
+            - /url: admin.php?page=hide-titles
+            - generic [ref=e404]: 
+            - generic [ref=e405]: Hide Titles
+        - listitem [ref=e406]:
+          - link "Poptin" [ref=e407] [cursor=pointer]:
+            - /url: admin.php?page=poptin
+            - generic [ref=e409]: Poptin
+          - list [ref=e410]:
+            - listitem [ref=e411]:
+              - link "Dashboard" [ref=e412] [cursor=pointer]:
+                - /url: admin.php?page=poptin
+            - listitem [ref=e413]:
+              - link "Full-Screen View" [ref=e414] [cursor=pointer]:
+                - /url: admin.php?page=poptin-full-screen
+            - listitem [ref=e415]:
+              - link "Support" [ref=e416] [cursor=pointer]:
+                - /url: admin.php?page=poptin-support
+            - listitem [ref=e417]:
+              - link "Log Out" [ref=e418] [cursor=pointer]:
+                - /url: admin.php?page=poptin-logout
+        - listitem [ref=e419]:
+          - link "Wordfence" [ref=e420] [cursor=pointer]:
+            - /url: admin.php?page=Wordfence
+            - generic [ref=e422]: Wordfence
+          - list [ref=e423]:
+            - listitem [ref=e424]:
+              - link "Escritorio 2" [ref=e425] [cursor=pointer]:
+                - /url: admin.php?page=Wordfence
+                - text: Escritorio
+                - generic "2" [ref=e426]
+            - listitem [ref=e427]:
+              - link "Cortafuegos" [ref=e428] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceWAF
+            - listitem [ref=e429]:
+              - link "Analizar" [ref=e430] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceScan
+            - listitem [ref=e431]:
+              - link "Herramientas" [ref=e432] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceTools
+            - listitem [ref=e433]:
+              - link "Audit Log" [ref=e434] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceAuditLog
+            - listitem [ref=e435]:
+              - link "Seguridad de acceso" [ref=e436] [cursor=pointer]:
+                - /url: admin.php?page=WFLS
+            - listitem [ref=e437]:
+              - link "Todas las opciones" [ref=e438] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceOptions
+            - listitem [ref=e439]:
+              - link "Ayuda" [ref=e440] [cursor=pointer]:
+                - /url: admin.php?page=WordfenceSupport
+            - listitem [ref=e441]:
+              - link "Actualizar a la versión premium" [ref=e442] [cursor=pointer]:
+                - /url: https://www.wordfence.com/gnl1menuUpgradePremium/products/pricing/
+                - strong [ref=e443]: Actualizar a la versión premium
+        - listitem [ref=e444]:
+          - link "AIOS" [ref=e445] [cursor=pointer]:
+            - /url: admin.php?page=aiowpsec
+            - generic [ref=e447]: AIOS
+          - list [ref=e448]:
+            - listitem [ref=e449]:
+              - link "Dashboard" [ref=e450] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec
+            - listitem [ref=e451]:
+              - link "Settings" [ref=e452] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_settings
+            - listitem [ref=e453]:
+              - link "User Security" [ref=e454] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_usersec
+            - listitem [ref=e455]:
+              - link "Database Security" [ref=e456] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_database
+            - listitem [ref=e457]:
+              - link "File Security" [ref=e458] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_filesystem
+            - listitem [ref=e459]:
+              - link "Firewall" [ref=e460] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_firewall
+            - listitem [ref=e461]:
+              - link "Brute Force" [ref=e462] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_brute_force
+            - listitem [ref=e463]:
+              - link "Spam Prevention" [ref=e464] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_spam
+            - listitem [ref=e465]:
+              - link "Scanner" [ref=e466] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_filescan
+            - listitem [ref=e467]:
+              - link "Tools" [ref=e468] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec_tools
+            - listitem [ref=e469]:
+              - link "Premium Upgrade" [ref=e470] [cursor=pointer]:
+                - /url: admin.php?page=aiowpsec&tab=premium-upgrade
+        - listitem [ref=e471]:
+          - link "Click to Chat" [ref=e472] [cursor=pointer]:
+            - /url: admin.php?page=click-to-chat
+            - generic [ref=e474]: Click to Chat
+          - list [ref=e475]:
+            - listitem [ref=e476]:
+              - link "Click to Chat" [ref=e477] [cursor=pointer]:
+                - /url: admin.php?page=click-to-chat
+            - listitem [ref=e478]:
+              - link "Greetings" [ref=e479] [cursor=pointer]:
+                - /url: admin.php?page=click-to-chat-greetings
+            - listitem [ref=e480]:
+              - link "Customize" [ref=e481] [cursor=pointer]:
+                - /url: admin.php?page=click-to-chat-customize-styles
+            - listitem [ref=e482]:
+              - link "Other Settings" [ref=e483] [cursor=pointer]:
+                - /url: admin.php?page=click-to-chat-other-settings
+            - listitem [ref=e484]:
+              - link " Go Premium" [ref=e485] [cursor=pointer]:
+                - /url: https://holithemes.com/plugins/click-to-chat/pricing
+                - generic [ref=e486]: 
+                - generic [ref=e487]: Go Premium
+        - listitem [ref=e488]:
+          - button "Contraer menú principal" [expanded] [ref=e489] [cursor=pointer]:
+            - generic [ref=e490]: 
+            - generic [ref=e491]: Cerrar menú
+    - generic [ref=e492]:
+      - generic [ref=e493]:
+        - navigation "Barra de herramientas":
+          - list:
+            - listitem [ref=e494]:
+              - link "Acerca de WordPress" [ref=e495] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/about.php
+                - generic [ref=e496]: 
+                - generic [ref=e497]: Acerca de WordPress
+            - listitem [ref=e498]:
+              - link " MAINTER" [ref=e499] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/
+            - listitem [ref=e500]:
+              - link "19 actualizaciones disponibles" [ref=e501] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/update-core.php
+                - generic [ref=e502]: 
+                - generic [ref=e503]: "19"
+                - generic [ref=e504]: 19 actualizaciones disponibles
+            - listitem [ref=e505]:
+              - link "0 comentarios en moderación" [ref=e506] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/edit-comments.php
+                - generic [ref=e507]: 
+                - generic [ref=e508]: "0"
+                - generic [ref=e509]: 0 comentarios en moderación
+            - listitem [ref=e510]:
+              - link "Agregar" [ref=e511] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/post-new.php
+                - generic [ref=e512]: 
+                - generic [ref=e513]: Agregar
+            - text: 
+            - listitem [ref=e514]:
+              - link " Insights" [ref=e515] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_reports
+                - generic [ref=e516]: 
+                - text: Insights
+            - listitem [ref=e517]:
+              - link "WPForms" [ref=e518] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=wpforms-overview
+              - text:   
+            - listitem [ref=e519]:
+              - link "SEO !" [ref=e520] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=aioseo
+                - text: SEO
+                - generic [ref=e522]: "!"
+          - list [ref=e523]:
+            - listitem [ref=e524]:
+              - link "Hola, Nicole Cabrera" [ref=e525] [cursor=pointer]:
+                - /url: https://www.mainter.com.bo/wp-admin/profile.php
+        - link "Cerrar sesión" [ref=e526] [cursor=pointer]:
+          - /url: https://www.mainter.com.bo/ingreso/?action=logout&_wpnonce=8571a1cd93
+      - main [ref=e527]:
+        - generic [ref=e528]:
+          - text: 
+          - generic [ref=e530]:
+            - img "Background with stars" [ref=e531]
+            - generic [ref=e533]:
+              - img "Images top" [ref=e534]
+              - img [ref=e535]
+              - img "Images middle" [ref=e537]
+              - img [ref=e538]
+              - img "Images end" [ref=e540]
+            - generic [ref=e541]:
+              - generic [ref=e542]:
+                - paragraph [ref=e543]:
+                  - text: You’ve been using the
+                  - link "Copy & Delete Posts" [ref=e544] [cursor=pointer]:
+                    - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=copy-delete-posts
+                  - text: plugin for over 156 days now – entirely for FREE :)
+                - paragraph [ref=e545]: Don’t worry, we’re not asking you to upgrade to premium. But maybe you can give us a nice review (if you like it)? We put a lot of effort into the free plugin, and made it feature-rich. It would motivate us a lot! Is that fair?
+              - generic [ref=e546]:
+                - link "Yes, that's fair! Let me give a nice review" [ref=e547] [cursor=pointer]:
+                  - /url: https://bit.ly/2VeAf2E
+                  - generic [ref=e548]:
+                    - button "Yes, that's fair!" [ref=e549]
+                    - generic [ref=e550]: Let me give a nice review
+                - button "Ask me later" [ref=e552] [cursor=pointer]
+                - button "I already did" [ref=e554] [cursor=pointer]
+                - button "I'm just taking, not giving" [ref=e556] [cursor=pointer]
+          - img "Imagen copiada correctamente" [ref=e558]
+          - generic [ref=e563]:
+            - list [ref=e564]:
+              - listitem [ref=e565]:
+                - link [ref=e566] [cursor=pointer]:
+                  - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=WordfenceWAF
+                  - generic [ref=e567]: 
+                - link "Volver a Cortafuegos" [ref=e568] [cursor=pointer]:
+                  - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=WordfenceWAF
+              - listitem [ref=e569]:
+                - button "Restaurar ajustes predeterminados" [ref=e570] [cursor=pointer]
+                - button "Cancelar cambios"
+                - button "Guardar cambios"
+            - text: 
+          - generic [ref=e572]:
+            - text: ¡Ya está disponible
+            - link "WordPress 6.9.4" [ref=e573] [cursor=pointer]:
+              - /url: https://wordpress.org/support/wordpress-version/version-6-9-4/
+            - text: "!"
+            - link "Por favor, actualizá WordPress ahora" [ref=e574] [cursor=pointer]:
+              - /url: https://www.mainter.com.bo/wp-admin/update-core.php
+              - text: Por favor, actualizá ahora
+            - text: .
+          - generic [ref=e576]:
+            - generic [ref=e578]:
+              - generic [ref=e579]:
+                - heading "Important Notice About Hide Titles" [level=4] [ref=e580]
+                - paragraph [ref=e581]: This plugin is no longer maintained. Please migrate to our new improved plugin "Daisy Titles" for continued support, new features, and future updates.
+                - paragraph [ref=e582]:
+                  - link "Migrate to Daisy Titles Now" [ref=e583] [cursor=pointer]:
+                    - /url: https://www.mainter.com.bo/wp-admin/update.php?action=install-plugin&plugin=daisy-titles&_wpnonce=d13fca654c
+              - generic [ref=e584]:
+                - paragraph [ref=e585]:
+                  - text: Hi there, you've been using Poptin for a while now. Do you know that Poptin has an affiliate program? Join now and get 25% lifetime commission
+                  - link " Dismiss" [ref=e586] [cursor=pointer]:
+                    - /url: "javascript:"
+                    - generic [ref=e587]: 
+                    - text: Dismiss
+                - link "Tell me more " [ref=e588] [cursor=pointer]:
+                  - /url: https://www.poptin.com/affiliate/?utm_source=wordpressplugin&domain=http://www.mainter.com.bo
+                  - text: Tell me more
+                  - generic [ref=e589]: 
+              - generic [ref=e590]:
+                - paragraph [ref=e591]: Please Setup Website Analytics to See Audience Insights
+                - paragraph [ref=e592]: "MonsterInsights, the #1 WordPress Analytics Plugin, helps you easily connect your website to Google Analytics, so that you can see how people find and use your website. Over 3 million website owners use MonsterInsights to see the stats that matter and grow their business."
+                - paragraph [ref=e593]:
+                  - generic [ref=e594] [cursor=pointer]: Please Connect Your Website to MonsterInsights
+                  - link "Learn More" [ref=e595] [cursor=pointer]:
+                    - /url: https://www.mainter.com.bo/wp-admin/admin.php?page=monsterinsights_settings#/about/getting-started
+                - paragraph [ref=e596]: "Note: You will be transfered to MonsterInsights.com to complete the setup wizard."
+              - paragraph [ref=e598]:
+                - strong [ref=e599]: ¿Quieres que Wordfence se mantenga actualizado automáticamente?
+                - button "Sí, activar la actualización automática." [ref=e600] [cursor=pointer]
+                - text: "|"
+                - button "No, gracias." [ref=e601] [cursor=pointer]
+            - generic [ref=e604]:
+              - generic [ref=e605]:
+                - heading "Opciones del cortafuegos" [level=2] [ref=e607]
+                - generic [ref=e608]:
+                  - link "Más información sobre el cortafuegos (se abre en una nueva pestaña)" [ref=e609] [cursor=pointer]:
+                    - /url: https://www.wordfence.com/help/?query=firewall-waf
+                    - text: Más información sobre el cortafuegos
+                    - generic [ref=e610]: (se abre en una nueva pestaña)
+                  - generic [ref=e611]: 
+              - list [ref=e616]:
+                - listitem [ref=e617]:
+                  - generic [ref=e618]:
+                    - generic [ref=e619]:
+                      - img [ref=e620]
+                      - generic [ref=e624]: 55%
+                      - generic [ref=e625]: "Nota: El estado se actualizará cuando se guarden los cambios"
+                    - paragraph [ref=e626]: Cortafuegos de la aplicación web
+                    - paragraph [ref=e627]: Detiene los ataques complejos
+                    - paragraph
+                - listitem [ref=e628]:
+                  - generic [ref=e629]:
+                    - generic [ref=e630]:
+                      - img [ref=e631]
+                      - generic [ref=e635]: 70%
+                      - generic [ref=e636]: "Nota: El estado se actualizará cuando se guarden los cambios"
+                    - paragraph [ref=e637]: Reglas del cortafuegos:Comunidad
+                    - paragraph [ref=e638]: La regla se actualiza con un retraso de 30 días
+                    - paragraph
+                - listitem [ref=e639]:
+                  - generic [ref=e640]:
+                    - generic [ref=e641]:
+                      - img [ref=e642]
+                      - generic [ref=e646]: 0%
+                      - generic [ref=e647]: "Nota: El estado se actualizará cuando se guarden los cambios"
+                    - paragraph [ref=e648]: Lista de bloqueos de IPs en tiempo real:Desactivado
+                    - paragraph [ref=e649]: Solicitudes de bloqueo desde IPs malintencionadas conocidas
+                    - paragraph
+                - listitem [ref=e650]:
+                  - generic [ref=e651]:
+                    - generic [ref=e652]:
+                      - img [ref=e653]
+                      - generic [ref=e657]: 100%
+                      - generic [ref=e658]: "Nota: El estado se actualizará cuando se guarden los cambios"
+                    - paragraph [ref=e659]: Protección contra ataques de fuerza bruta
+                    - paragraph [ref=e660]: Detiene los ataques de adivinación de contraseñas
+                    - paragraph
+              - generic [ref=e663]:
+                - strong [ref=e667]: Opciones de cortafuegos básico
+                - list [ref=e669]:
+                  - listitem [ref=e670]:
+                    - heading "Estado del cortafuegos de la aplicación web" [level=3] [ref=e671]
+                    - paragraph [ref=e672]:
+                      - generic [ref=e673]:
+                        - strong [ref=e674]: "Activo y protegiendo:"
+                        - text: En este modo, el cortafuegos de aplicaciones web de Wordfence está activamente bloqueando las solicitudes que coincidan con los patrones de ataque conocidos y está protegiendo activamente tu sitio de los atacantes.
+                    - paragraph [ref=e675]:
+                      - combobox [ref=e676] [cursor=pointer]
+                      - combobox "Activo y protegiendo" [ref=e679] [cursor=pointer]:
+                        - textbox "Activo y protegiendo" [ref=e680]
+                    - text: 
+                  - listitem [ref=e681]:
+                    - heading "Nivel de protección" [level=3] [ref=e682]
+                    - paragraph [ref=e683]:
+                      - strong [ref=e684]: "Protección extendida:"
+                      - text: Todas las solicitudes de PHP serán procesadas por el cortafuegos antes de su ejecución.
+                    - paragraph [ref=e685]:
+                      - text: Si te mudas a un nuevo alojamiento o una nueva ubicación de instalación, es posible que debas desactivar temporalmente la protección extendida para evitar errores de archivo no encontrado. Utiliza esta acción para borrar los cambios de configuración que activan el modo de protección extendida o podés
+                      - link "borrarlos manualmente (se abre en una nueva pestaña)" [ref=e686] [cursor=pointer]:
+                        - /url: https://www.wordfence.com/help/?query=firewall-waf-remove-manually
+                        - text: borrarlos manualmente
+                        - generic [ref=e687]: (se abre en una nueva pestaña)
+                    - paragraph [ref=e688]:
+                      - button "Quitar protección extendida" [ref=e689] [cursor=pointer]
+                  - listitem [ref=e690]:
+                    - heading "Lista de bloqueo de IP en tiempo real" [level=3] [ref=e691]
+                    - paragraph [ref=e692]:
+                      - strong [ref=e693]: "Característica premium:"
+                      - text: Esta característica bloquea todo el tráfico de direcciones IP con un alto volumen de actividad malintencionada reciente utilizando la lista de bloqueo en tiempo real de Wordfence.
+                    - paragraph [ref=e694]:
+                      - link "Actualizar a la versión premium" [ref=e695] [cursor=pointer]:
+                        - /url: https://www.wordfence.com/gnl1blacklistUpgrade/wordfence-signup/#premium-order-form
+                      - link "Conocé más (se abre en una nueva pestaña)" [ref=e696] [cursor=pointer]:
+                        - /url: https://www.wordfence.com/gnl1blacklistLearn/wordfence-signup/
+                        - text: Conocé más
+                        - generic [ref=e697]: (se abre en una nueva pestaña)
+              - generic [ref=e700]:
+                - generic [ref=e702] [cursor=pointer]:
+                  - strong [ref=e704]: Opciones avanzadas del cortafuegos
+                  - checkbox [checked] [ref=e706]
+                - list [ref=e708]:
+                  - listitem [ref=e709]:
+                    - list [ref=e710]:
+                      - checkbox "Retrasa el bloqueo de IP y país hasta que se hayan cargado WordPress y los plugins (solo procesa antes las reglas del cortafuegos)" [ref=e711] [cursor=pointer]:
+                        - generic [ref=e712]: 
+                      - listitem [ref=e713] [cursor=pointer]:
+                        - list [ref=e714]:
+                          - listitem [ref=e715]:
+                            - text: Retrasa el bloqueo de IP y país hasta que se hayan cargado WordPress y los plugins (solo procesa antes las reglas del cortafuegos)
+                            - link "(se abre en una nueva pestaña)" [ref=e716]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-delay-blocking
+                              - generic [ref=e717]: 
+                              - generic [ref=e718]: (se abre en una nueva pestaña)
+                          - listitem
+                  - listitem [ref=e719]:
+                    - list [ref=e720]:
+                      - listitem [ref=e721]
+                      - listitem [ref=e722]:
+                        - list [ref=e723]:
+                          - listitem [ref=e724]:
+                            - text: Direcciones IP permitidas que eluden todas las reglas
+                            - link "(se abre en una nueva pestaña)" [ref=e725] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-whitelisted-ips
+                              - generic [ref=e726]: 
+                              - generic [ref=e727]: (se abre en una nueva pestaña)
+                          - listitem [ref=e728]:
+                            - list [ref=e729]:
+                              - listitem [ref=e730]:
+                                - textbox "Direcciones IP permitidas que eluden todas las reglas" [ref=e731]
+                              - listitem [ref=e732]:
+                                - text: "Las direcciones IP incluidas en la lista de permitidos deben estar separadas por comas o colocadas en líneas separadas. Podés especificar rangos con los siguientes formatos: 127.0.0.1/24, 127.0.0.[1-100] o 127.0.0.1-127.0.1.100"
+                                - text: Wordfence permite automáticamente listas de permitidos
+                                - link "redes privadas (se abre en una nueva pestaña)" [ref=e733] [cursor=pointer]:
+                                  - /url: http://en.wikipedia.org/wiki/Private_network
+                                  - text: redes privadas
+                                  - generic [ref=e734]: (se abre en una nueva pestaña)
+                                - text: porque no se pueden enrutar en la internet pública.
+                  - listitem [ref=e735]:
+                    - list [ref=e736]:
+                      - listitem [ref=e737]
+                      - listitem [ref=e738]:
+                        - list [ref=e739]:
+                          - listitem [ref=e740]:
+                            - text: Servicios permitidos
+                            - link "(se abre en una nueva pestaña)" [ref=e741] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-whitelisted-services
+                              - generic [ref=e742]: 
+                              - generic [ref=e743]: (se abre en una nueva pestaña)
+                          - listitem [ref=e744]:
+                            - list [ref=e745]:
+                              - checkbox "Sucuri" [checked] [ref=e746] [cursor=pointer]:
+                                - generic [ref=e747]: 
+                              - listitem [ref=e748]: Sucuri
+                            - list [ref=e749]:
+                              - checkbox "Facebook" [checked] [ref=e750] [cursor=pointer]:
+                                - generic [ref=e751]: 
+                              - listitem [ref=e752]: Facebook
+                            - list [ref=e753]:
+                              - checkbox "Uptime Robot" [checked] [ref=e754] [cursor=pointer]:
+                                - generic [ref=e755]: 
+                              - listitem [ref=e756]: Uptime Robot
+                            - list [ref=e757]:
+                              - checkbox "StatusCake" [checked] [ref=e758] [cursor=pointer]:
+                                - generic [ref=e759]: 
+                              - listitem [ref=e760]: StatusCake
+                            - list [ref=e761]:
+                              - checkbox "ManageWP" [ref=e762] [cursor=pointer]:
+                                - generic [ref=e763]: 
+                              - listitem [ref=e764]: ManageWP
+                            - list [ref=e765]:
+                              - checkbox "Seznam Search Engine" [checked] [ref=e766] [cursor=pointer]:
+                                - generic [ref=e767]: 
+                              - listitem [ref=e768]: Seznam Search Engine
+                            - list [ref=e769]:
+                              - checkbox "Google Search Engine" [checked] [ref=e770] [cursor=pointer]:
+                                - generic [ref=e771]: 
+                              - listitem [ref=e772]: Google Search Engine
+                  - listitem [ref=e773]:
+                    - list [ref=e774]:
+                      - listitem [ref=e775]
+                      - listitem [ref=e776]:
+                        - list [ref=e777]:
+                          - listitem [ref=e778]:
+                            - text: Bloquear inmediatamente las direcciones IP que acceden a estas URL
+                            - link "(se abre en una nueva pestaña)" [ref=e779] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-immediately-block-urls
+                              - generic [ref=e780]: 
+                              - generic [ref=e781]: (se abre en una nueva pestaña)
+                          - listitem [ref=e782]:
+                            - list [ref=e783]:
+                              - listitem [ref=e784]:
+                                - textbox "Bloquear inmediatamente las direcciones IP que acceden a estas URL" [ref=e785]
+                              - listitem [ref=e786]: Separa varias URL con comas o colócalas en líneas separadas. Los asteriscos son comodines, pero utilíczalos con cuidado. Si ves que un atacante investiga repetidamente tu sitio en busca de una vulnerabilidad conocida, puede usar esto para bloquearlo de inmediato. Todas las URL deben comenzar con "/" sin comillas y deben ser relativas. p.ej. /badURLone/, /bannedPage.html, /dont-access/this/URL/, /starts/with-*
+                  - listitem [ref=e787]:
+                    - list [ref=e788]:
+                      - listitem [ref=e789]
+                      - listitem [ref=e790]:
+                        - list [ref=e791]:
+                          - listitem [ref=e792]:
+                            - text: Direcciones IP ignoradas para alertas de cortafuegos de aplicaciones web de Wordfence
+                            - link "(se abre en una nueva pestaña)" [ref=e793] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-ignored-alert-ips
+                              - generic [ref=e794]: 
+                              - generic [ref=e795]: (se abre en una nueva pestaña)
+                          - listitem [ref=e796]:
+                            - list [ref=e797]:
+                              - listitem [ref=e798]:
+                                - textbox "Direcciones IP ignoradas para alertas de cortafuegos de aplicaciones web de Wordfence" [ref=e799]
+                              - listitem [ref=e800]: Las direcciones IP ignoradas deben estar separadas por comas o colocadas en líneas separadas. Estas direcciones se ignorarán de cualquier alerta acerca de un aumento de los ataques y se pueden usar para ignorar cosas como los escáneres de seguridad de web independientes.
+                  - listitem [ref=e801]:
+                    - list [ref=e802]:
+                      - listitem [ref=e803]:
+                        - strong [ref=e804]: Reglas
+                        - link "(se abre en una nueva pestaña)" [ref=e805] [cursor=pointer]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-rules
+                          - generic [ref=e806]: 
+                          - generic [ref=e807]: (se abre en una nueva pestaña)
+                      - listitem
+                      - listitem [ref=e808]:
+                        - table [ref=e809]:
+                          - rowgroup [ref=e810]:
+                            - row "Categoría Descripción" [ref=e811]:
+                              - columnheader [ref=e812]
+                              - columnheader "Categoría" [ref=e813]
+                              - columnheader "Descripción" [ref=e814]
+                          - rowgroup [ref=e815]:
+                            - row "whitelist Whitelisted URL" [ref=e816]:
+                              - cell [ref=e817]:
+                                - link [ref=e819] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "whitelist" [ref=e820]
+                              - cell "Whitelisted URL" [ref=e821]
+                            - row "lfi Slider Revolution <= 4.1.4 - Directory Traversal" [ref=e822]:
+                              - cell [ref=e823]:
+                                - link [ref=e825] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "lfi" [ref=e826]
+                              - cell "Slider Revolution <= 4.1.4 - Directory Traversal" [ref=e827]
+                            - row "sqli SQL Injection" [ref=e828]:
+                              - cell [ref=e829]:
+                                - link [ref=e831] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "sqli" [ref=e832]
+                              - cell "SQL Injection" [ref=e833]
+                            - 'row "xss XSS: Cross Site Scripting" [ref=e834]':
+                              - cell [ref=e835]:
+                                - link [ref=e837] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "xss" [ref=e838]
+                              - 'cell "XSS: Cross Site Scripting" [ref=e839]'
+                            - row "file_upload Malicious File Upload" [ref=e840]:
+                              - cell [ref=e841]:
+                                - link [ref=e843] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "file_upload" [ref=e844]
+                              - cell "Malicious File Upload" [ref=e845]
+                            - row "traversal Directory Traversal" [ref=e846]:
+                              - cell [ref=e847]:
+                                - link [ref=e849] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "traversal" [ref=e850]
+                              - cell "Directory Traversal" [ref=e851]
+                            - 'row "lfi LFI: Local File Inclusion" [ref=e852]':
+                              - cell [ref=e853]:
+                                - link [ref=e855] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "lfi" [ref=e856]
+                              - 'cell "LFI: Local File Inclusion" [ref=e857]'
+                            - 'row "xxe XXE: External Entity Expansion" [ref=e858]':
+                              - cell [ref=e859]:
+                                - link [ref=e861] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "xxe" [ref=e862]
+                              - 'cell "XXE: External Entity Expansion" [ref=e863]'
+                            - row "xss DZS Video Gallery <= 8.60 - Reflected Cross-Site Scripting" [ref=e864]:
+                              - cell [ref=e865]:
+                                - link [ref=e867] [cursor=pointer]:
+                                  - /url: "#"
+                              - cell "xss" [ref=e868]
+                              - cell "DZS Video Gallery <= 8.60 - Reflected Cross-Site Scripting" [ref=e869]
+                          - rowgroup [ref=e870]:
+                            - row "MOSTRAR TODAS LAS REGLAS" [ref=e871]:
+                              - cell "MOSTRAR TODAS LAS REGLAS" [ref=e872]:
+                                - button "MOSTRAR TODAS LAS REGLAS" [ref=e873] [cursor=pointer]
+                      - listitem [ref=e874]:
+                        - list [ref=e875]:
+                          - listitem [ref=e876]:
+                            - button "Actualizar reglas manualmente" [ref=e877] [cursor=pointer]
+                          - listitem [ref=e878]:
+                            - emphasis [ref=e879]: "Comprobación de la próxima actualización: 20/5/2026, 16:34:00"
+              - generic [ref=e882]:
+                - generic [ref=e884] [cursor=pointer]:
+                  - strong [ref=e886]: Protección contra ataques de fuerza bruta
+                  - checkbox [checked] [ref=e888]
+                - list [ref=e890]:
+                  - listitem [ref=e891]:
+                    - list [ref=e892]:
+                      - listitem [ref=e893]:
+                        - list [ref=e894]:
+                          - listitem [ref=e895]:
+                            - list [ref=e896]:
+                              - listitem [ref=e897]:
+                                - strong [ref=e899]: Activá la protección de fuerza bruta
+                                - link "(se abre en una nueva pestaña)" [ref=e900] [cursor=pointer]:
+                                  - /url: https://www.wordfence.com/help/?query=firewall-waf-option-enable-login-security
+                                  - generic [ref=e901]: 
+                                  - generic [ref=e902]: (se abre en una nueva pestaña)
+                              - listitem [ref=e903]: Esta opción habilita todas las opciones de "protección contra fuerza bruta", incluida la aplicación estricta de contraseñas y la limitación de inicio de sesión no válido. Podés modificar las opciones individuales a continuación.
+                          - listitem [ref=e904]:
+                            - radiogroup "Activá la protección de fuerza bruta" [ref=e905]:
+                              - radio "Off" [ref=e906] [cursor=pointer]
+                              - radio "On" [checked] [ref=e907] [cursor=pointer]
+                  - listitem [ref=e908]:
+                    - list [ref=e909]:
+                      - listitem [ref=e910]
+                      - listitem [ref=e911]:
+                        - list [ref=e912]:
+                          - listitem [ref=e913]:
+                            - text: Bloquear después de cuántos fallos de inicio de sesión
+                            - link "(se abre en una nueva pestaña)" [ref=e914] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-lock-out-failure-count
+                              - generic [ref=e915]: 
+                              - generic [ref=e916]: (se abre en una nueva pestaña)
+                          - listitem [ref=e917]:
+                            - combobox [ref=e918] [cursor=pointer]
+                            - combobox "20" [ref=e921] [cursor=pointer]:
+                              - textbox "20" [ref=e922]
+                  - listitem [ref=e923]:
+                    - list [ref=e924]:
+                      - listitem [ref=e925]
+                      - listitem [ref=e926]:
+                        - list [ref=e927]:
+                          - listitem [ref=e928]:
+                            - text: Bloquear después de cuántos intentos de contraseña olvidada
+                            - link "(se abre en una nueva pestaña)" [ref=e929] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-lock-out-forgot-password-count
+                              - generic [ref=e930]: 
+                              - generic [ref=e931]: (se abre en una nueva pestaña)
+                          - listitem [ref=e932]:
+                            - combobox [ref=e933] [cursor=pointer]
+                            - combobox "20" [ref=e936] [cursor=pointer]:
+                              - textbox "20" [ref=e937]
+                  - listitem [ref=e938]:
+                    - list [ref=e939]:
+                      - listitem [ref=e940]
+                      - listitem [ref=e941]:
+                        - list [ref=e942]:
+                          - listitem [ref=e943]:
+                            - text: Cuenta los errores durante qué período de tiempo
+                            - link "(se abre en una nueva pestaña)" [ref=e944] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-count-time-period
+                              - generic [ref=e945]: 
+                              - generic [ref=e946]: (se abre en una nueva pestaña)
+                          - listitem [ref=e947]:
+                            - combobox [ref=e948] [cursor=pointer]
+                            - combobox "4 horas" [ref=e951] [cursor=pointer]:
+                              - textbox "4 horas" [ref=e952]
+                  - listitem [ref=e953]:
+                    - list [ref=e954]:
+                      - listitem [ref=e955]
+                      - listitem [ref=e956]:
+                        - list [ref=e957]:
+                          - listitem [ref=e958]:
+                            - text: Cantidad de tiempo que un usuario está bloqueado
+                            - link "(se abre en una nueva pestaña)" [ref=e959] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-lockout-duration
+                              - generic [ref=e960]: 
+                              - generic [ref=e961]: (se abre en una nueva pestaña)
+                          - listitem [ref=e962]:
+                            - combobox [ref=e963] [cursor=pointer]
+                            - combobox "4 horas" [ref=e966] [cursor=pointer]:
+                              - textbox "4 horas" [ref=e967]
+                  - listitem [ref=e968]:
+                    - list [ref=e969]:
+                      - checkbox "Bloquear inmediatamente los nombres de usuario no válidos" [ref=e970] [cursor=pointer]:
+                        - generic [ref=e971]: 
+                      - listitem [ref=e972] [cursor=pointer]:
+                        - text: Bloquear inmediatamente los nombres de usuario no válidos
+                        - link "(se abre en una nueva pestaña)" [ref=e973]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-immediately-lock-out-invalid-users
+                          - generic [ref=e974]: 
+                          - generic [ref=e975]: (se abre en una nueva pestaña)
+                  - listitem [ref=e976]:
+                    - list [ref=e977]:
+                      - listitem [ref=e978]
+                      - listitem [ref=e979]:
+                        - list [ref=e981]:
+                          - listitem [ref=e982]:
+                            - text: Bloquear inmediatamente la IP de los usuarios que intentan iniciar sesión con estos nombres de usuario
+                            - link "(se abre en una nueva pestaña)" [ref=e983] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-immediately-block-users
+                              - generic [ref=e984]: 
+                              - generic [ref=e985]: (se abre en una nueva pestaña)
+                          - listitem [ref=e986]: Presiona enter para agregar un nombre de usuario
+                        - listbox [ref=e987] [cursor=pointer]
+                        - combobox [ref=e990]:
+                          - list [ref=e991]:
+                            - listitem [ref=e992]:
+                              - searchbox [ref=e993]
+                        - generic:
+                          - list
+                  - listitem [ref=e994]:
+                    - list [ref=e995]:
+                      - checkbox [checked] [ref=e996] [cursor=pointer]:
+                        - generic [ref=e997]: 
+                      - listitem [ref=e998]:
+                        - list [ref=e999]:
+                          - listitem [ref=e1000] [cursor=pointer]:
+                            - text: Evita el uso de contraseñas filtradas en caso de violación de datos
+                            - link "(se abre en una nueva pestaña)" [ref=e1001]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-prevent-breach-passwords
+                              - generic [ref=e1002]: 
+                              - generic [ref=e1003]: (se abre en una nueva pestaña)
+                          - listitem [ref=e1004]:
+                            - combobox [ref=e1005] [cursor=pointer]
+                            - combobox "Sólo para administradores" [ref=e1008] [cursor=pointer]:
+                              - textbox "Sólo para administradores" [ref=e1009]
+                  - listitem [ref=e1010]:
+                    - list [ref=e1011]:
+                      - listitem [ref=e1012]:
+                        - list [ref=e1013]:
+                          - listitem [ref=e1014]:
+                            - strong [ref=e1015]: Opciones adicionales
+                  - listitem [ref=e1016]:
+                    - list [ref=e1017]:
+                      - checkbox [checked] [ref=e1018] [cursor=pointer]:
+                        - generic [ref=e1019]: 
+                      - listitem [ref=e1020]:
+                        - list [ref=e1021]:
+                          - listitem [ref=e1022] [cursor=pointer]:
+                            - text: Forzar contraseñas seguras
+                            - link "(se abre en una nueva pestaña)" [ref=e1023]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-enforce-strong-passwords
+                              - generic [ref=e1024]: 
+                              - generic [ref=e1025]: (se abre en una nueva pestaña)
+                          - listitem [ref=e1026]:
+                            - combobox [ref=e1027] [cursor=pointer]
+                            - combobox "Obligar a los administradores y editores a utilizar contraseñas seguras (recomendado)" [ref=e1030] [cursor=pointer]:
+                              - textbox "Obligar a los administradores y editores a utilizar contraseñas seguras (recomendado)" [ref=e1031]
+                  - listitem [ref=e1032]:
+                    - list [ref=e1033]:
+                      - checkbox "No permitas que WordPress revele usuarios válidos en errores de inicio de sesión" [checked] [ref=e1034] [cursor=pointer]:
+                        - generic [ref=e1035]: 
+                      - listitem [ref=e1036] [cursor=pointer]:
+                        - text: No permitas que WordPress revele usuarios válidos en errores de inicio de sesión
+                        - link "(se abre en una nueva pestaña)" [ref=e1037]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-mask-login-errors
+                          - generic [ref=e1038]: 
+                          - generic [ref=e1039]: (se abre en una nueva pestaña)
+                  - listitem [ref=e1040]:
+                    - list [ref=e1041]:
+                      - checkbox "Impedir que los usuarios registren el nombre de usuario 'admin' si no existe" [checked] [ref=e1042] [cursor=pointer]:
+                        - generic [ref=e1043]: 
+                      - listitem [ref=e1044] [cursor=pointer]:
+                        - text: Impedir que los usuarios registren el nombre de usuario 'admin' si no existe
+                        - link "(se abre en una nueva pestaña)" [ref=e1045]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-prevent-admin-registration
+                          - generic [ref=e1046]: 
+                          - generic [ref=e1047]: (se abre en una nueva pestaña)
+                  - listitem [ref=e1048]:
+                    - list [ref=e1049]:
+                      - checkbox "Evita el descubrimiento de nombres de usuario a través de escaneos '/?Author=N', la API incrustada, la API REST de WordPress y los sitemaps XML de WordPress" [checked] [ref=e1050] [cursor=pointer]:
+                        - generic [ref=e1051]: 
+                      - listitem [ref=e1052] [cursor=pointer]:
+                        - text: Evita el descubrimiento de nombres de usuario a través de escaneos '/?Author=N', la API incrustada, la API REST de WordPress y los sitemaps XML de WordPress
+                        - link "(se abre en una nueva pestaña)" [ref=e1053]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-prevent-author-scan
+                          - generic [ref=e1054]: 
+                          - generic [ref=e1055]: (se abre en una nueva pestaña)
+                  - listitem [ref=e1056]:
+                    - list [ref=e1057]:
+                      - checkbox "Desactivar las contraseñas de aplicación de WordPress" [ref=e1058] [cursor=pointer]:
+                        - generic [ref=e1059]: 
+                      - listitem [ref=e1060] [cursor=pointer]:
+                        - text: Desactivar las contraseñas de aplicación de WordPress
+                        - link "(se abre en una nueva pestaña)" [ref=e1061]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-disable-application-passwords
+                          - generic [ref=e1062]: 
+                          - generic [ref=e1063]: (se abre en una nueva pestaña)
+                  - listitem [ref=e1064]:
+                    - list [ref=e1065]:
+                      - checkbox "Bloquear IPs que envíen solicitudes POST con agente de usuario y referente en blanco" [ref=e1066] [cursor=pointer]:
+                        - generic [ref=e1067]: 
+                      - listitem [ref=e1068] [cursor=pointer]:
+                        - list [ref=e1069]:
+                          - listitem [ref=e1070]:
+                            - text: Bloquear IPs que envíen solicitudes POST con agente de usuario y referente en blanco
+                            - link "(se abre en una nueva pestaña)" [ref=e1071]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-block-bad-post
+                              - generic [ref=e1072]: 
+                              - generic [ref=e1073]: (se abre en una nueva pestaña)
+                          - listitem [ref=e1074]: If you use external services that may send POST requests without these headers, do not use this option, as they will be blocked.
+                  - listitem [ref=e1075]:
+                    - list [ref=e1076]:
+                      - listitem [ref=e1077]
+                      - listitem [ref=e1078]:
+                        - list [ref=e1079]:
+                          - listitem [ref=e1080]:
+                            - text: Texto personalizado mostrado en las páginas de bloqueo
+                            - link "(se abre en una nueva pestaña)" [ref=e1081] [cursor=pointer]:
+                              - /url: https://www.wordfence.com/help/?query=firewall-waf-option-custom-block-text
+                              - generic [ref=e1082]: 
+                              - generic [ref=e1083]: (se abre en una nueva pestaña)
+                          - listitem [ref=e1084]:
+                            - list [ref=e1085]:
+                              - listitem [ref=e1086]:
+                                - textbox "Texto personalizado mostrado en las páginas de bloqueo" [ref=e1087]
+                              - listitem [ref=e1088]: Las etiquetas HTML se eliminarán antes de la salida y los saltos de línea se convertirán en las etiquetas adecuadas.
+                  - listitem [ref=e1089]:
+                    - list [ref=e1090]:
+                      - checkbox "Comprobar la fortaleza de la contraseña al actualizar el perfil" [checked] [ref=e1091] [cursor=pointer]:
+                        - generic [ref=e1092]: 
+                      - listitem [ref=e1093] [cursor=pointer]:
+                        - text: Comprobar la fortaleza de la contraseña al actualizar el perfil
+                        - link "(se abre en una nueva pestaña)" [ref=e1094]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-check-password
+                          - generic [ref=e1095]: 
+                          - generic [ref=e1096]: (se abre en una nueva pestaña)
+                  - listitem [ref=e1097]:
+                    - list [ref=e1098]:
+                      - checkbox "Participa en la red de seguridad en tiempo real de Wordfence" [checked] [ref=e1099] [cursor=pointer]:
+                        - generic [ref=e1100]: 
+                      - listitem [ref=e1101] [cursor=pointer]:
+                        - text: Participa en la red de seguridad en tiempo real de Wordfence
+                        - link "(se abre en una nueva pestaña)" [ref=e1102]:
+                          - /url: https://www.wordfence.com/help/?query=firewall-waf-option-participate-wfsn
+                          - generic [ref=e1103]: 
+                          - generic [ref=e1104]: (se abre en una nueva pestaña)
+              - generic [ref=e1107]:
+                - generic [ref=e1109] [cursor=pointer]:
+                  - strong [ref=e1111]: Limitación de puntuación
+                  - checkbox [ref=e1113]
+                - text:              
+              - generic [ref=e1116]:
+                - generic [ref=e1118] [cursor=pointer]:
+                  - strong [ref=e1120]: URLs permitidas
+                  - checkbox [ref=e1122]
+                - text:         
+    - contentinfo [ref=e1123]:
+      - paragraph
+      - paragraph
+    - text:        
+  - text: 
+  - log [ref=e1124]
+  - log [ref=e1125]
+  - log [ref=e1126]
+  - log [ref=e1127]

@@ -1,7 +1,22 @@
 # PROMPT PARA CLAUDE DESIGN (claude.ai con Artifacts o Sonnet/Opus 4.7)
 
-> **Versión:** 2.0 (aplicado `ui-ux-pro-max` + `canvas-design` + `interface-design` + `impeccable`)
-> **Cómo usar**: abrí claude.ai, modelo Sonnet 4.6 o Opus 4.7. Adjuntá los 3 PDFs (`LogoNoMásMAlezas2026-Elementos.pdf`, `PROYETO MAINTER 2026 - BRUJULA.pdf`, `AmbientaciónoNoMalezas2.pdf`) **y este prompt completo**. Pedile un Artifact con HTML+CSS+JS embebidos.
+> **Versión:** 3.0 — final tras decisiones del cliente
+> **Stack confirmado:** WordPress (mainter.com.bo) + GitHub jsDelivr + Google Sheets + n8n
+> **Paleta locked:** PDF source of truth (N=Verde, E=Azul, S=Rojo, O=Amarillo)
+>
+> **Cómo usar**:
+> 1. Abrí https://claude.ai
+> 2. Modelo: **Claude Sonnet 4.6** (rápido) o **Opus 4.7** (mejor calidad)
+> 3. Adjuntá:
+>    - `pdf/LogoNoMásMAlezas2026-Elementos.pdf`
+>    - `pdf/PROYETO MAINTER 2026 - BRUJULA.pdf`
+>    - `pdf/AmbientaciónoNoMalezas2.pdf`
+>    - Las 4 imágenes de `Ilustrator/elementos/logos/logo-letra-*.png`
+>    - `Ilustrator/elementos/brujula/brujula-rosa-vientos.png`
+>    - `Ilustrator/elementos/logos/logo-NO-MAS-MALEZAS.png`
+>    - Los 3 retratos de `oradores/perfiles/*-600.webp`
+> 4. Pegá este prompt completo como tu primer mensaje
+> 5. Pedile **Artifact** con HTML + CSS + JS embebidos (un solo archivo)
 
 ---
 
@@ -44,21 +59,31 @@ Ilustrator/elementos/
 └── mainter-en-N.png / E / S / O      ← variante "MAINTER" sobre cada color cardinal
 ```
 
-**Color de fondo del evento (extraído del PNG real)**: `#1B0E48` — azul profundo violáceo (NO `#0A1628`). Ajustá el design system para alinearse con el branding entregado.
+**Color de fondo del evento (extraído del PNG real)**: `#1B0E48` — azul profundo violáceo.
 
-**Color paleta REAL del evento**:
-- **NORTE = Verde lima** (`#A7C44A` aprox) — extraído de `logo-letra-N.png`
-- **ESTE = Amarillo** (`#F1C40F` aprox) — extraído de `logo-letra-E.png`
-- **SUR = Rojo coral** (`#E74C3C` aprox) — extraído de `logo-letra-S.png`
-- **OESTE = Cian turquesa** (`#3DBCB0` aprox) — extraído de `logo-letra-O.png`
+**Color paleta LOCKED — usar PDF como source of truth (decisión cliente)**:
 
-⚠️ **Cambio importante**: la paleta del PDF "Brújula" decía Verde-N / Azul-E / Rojo-S / Amarillo-O, pero la gráfica real entregada (PNGs) dice **Verde-N / Amarillo-E / Rojo-S / Cian-O**. **Confirmar con cliente** cuál es la final. Hasta confirmación, **usar la paleta de los PNGs entregados** (es lo que va impreso/ambientación).
+| Cardinal | Color | HEX | Tema | Producto | Disertante | País |
+|---|---|---|---|---|---|---|
+| **N** | Verde | `#27AE60` | Manejo de Barbecho | Ultracheval | Pedro Christoffoleti | 🇧🇷 Brasil |
+| **E** | Azul | `#2E86DE` | Pre-emergente | ZethaMaxx | Lucas Paterlini | 🇦🇷 Argentina |
+| **S** | Rojo | `#E74C3C` | Post-emergente | Balón | (pendiente nombre) | 🇵🇾 Paraguay |
+| **O** | Amarillo | `#F1C40F` | Malezas Resistentes | Apresa | Pablo Franco | 🇧🇴 Bolivia |
 
 ---
 
-## 📸 Fotos de oradores disponibles
+## 📸 Fotos de oradores — YA GENERADAS (usar tal cual)
 
-Hay 3 JPEGs en `oradores/` (de WhatsApp, requieren post-procesado: recorte cuadrado, fondo limpio). El cliente debe identificar quién es quién entre Pedro Christoffoleti (Brasil), Lucas Paterlini (Argentina), Pablo Franco (Bolivia), y el disertante de Paraguay (pendiente). Mientras tanto, usá **placeholders circulares 96px con la letra cardinal** sobre fondo del color del cardinal.
+3 retratos profesionales generados con Higgsfield, traje navy + fondo blanco/transparente, rasgos 100% preservados. Disponibles en `oradores/perfiles/`:
+
+- `pedro-christoffoleti-600.webp` (NORTE · Brasil)
+- `lucas-paterlini-600.webp` (ESTE · Argentina)
+- `pablo-franco-600.webp` (OESTE · Bolivia)
+- `paraguay-placeholder-600.webp` (SUR placeholder hasta nombre real, usa foto Pablo)
+- Versiones `-transparent.png` para sobre cualquier fondo
+- Versiones `-200.webp` para thumbnails
+
+Usar directamente. Forma circular CSS (`border-radius: 50%; border: 3px solid var(--cardinal-color)`).
 
 ---
 
@@ -358,10 +383,102 @@ Botón submit grande full-width: `Confirmar registro →`.
 5. **Animaciones CSS** primero; JS solo cuando CSS no alcanza.
 6. **JSON-LD `Event` schema completo** en `<head>`.
 7. **OG image** placeholder con `1200x630`.
-8. **Form submit**: `<form id="reg-form">` con `preventDefault()` y `console.log(data)`. Stub para que yo cablee webhook después.
+8. **Form submit**: `<form id="reg-form">` con `preventDefault()` + `fetch(WEBHOOK_URL, ...)`. Definí `const WEBHOOK_URL = 'PENDIENTE_N8N_URL';` arriba del JS para que yo solo reemplace la string.
 9. **Campo dinámico**: animar opacity+translateY al cambiar (300ms ease-out).
 10. **Critical CSS inline** (no `<link>` externo en MVP). Yo separo después.
 11. **Comentarios estructurales**: `<!-- ===== SECTION: HERO ===== -->` para facilitar edits.
+
+---
+
+## 🔌 Integración técnica — escribí el código pensando en este stack
+
+Esta página termina **embebida en WordPress (mainter.com.bo)**, con CSS/JS servidos vía **jsDelivr CDN desde GitHub**, y submits que van a un **webhook n8n** que escribe en **Google Sheets** y manda email con QR. Asumí estos parámetros al codear:
+
+### A. Form submit payload (este JSON va al webhook)
+
+```javascript
+async function handleSubmit(e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const payload = {
+    nombre:   formData.get('nombre').trim(),
+    tipo:     formData.get('tipo'),
+    contexto: formData.get('contexto').trim(),
+    whatsapp: formData.get('whatsapp').replace(/\D/g, ''), // solo dígitos
+    email:    formData.get('email').trim().toLowerCase(),
+    acepta_comunicaciones: formData.get('acepta') === 'on',
+    user_agent: navigator.userAgent,
+    fuente:   'landing-web'
+  };
+
+  const WEBHOOK_URL = 'PENDIENTE_N8N_URL'; // ← reemplazo después
+  try {
+    setLoading(true);
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    // data: { ok, id, nombre, color, punto, sector, qr_data_url }
+    showSuccess(data);
+  } catch (err) {
+    showError('No pudimos registrarte. Intentá de nuevo o escribinos por WhatsApp.');
+  } finally {
+    setLoading(false);
+  }
+}
+```
+
+### B. Referencias a assets externos (URLs jsDelivr finales)
+
+Para imágenes y assets, **NO** uses `<img src="Ilustrator/elementos/logos/...">`. Usá las URLs jsDelivr que ya están preparadas:
+
+```
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/logos/logo-NO-MAS-MALEZAS.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/logos/logo-mainter.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/brujula/brujula-rosa-vientos.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/banderas/bandera-bolivia.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/banderas/bandera-brasil.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/banderas/bandera-argentina.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/banderas/bandera-paraguay.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/fondos/fondo-tile-200x200.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pedro-christoffoleti-600.webp
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/lucas-paterlini-600.webp
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pablo-franco-600.webp
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/paraguay-placeholder-600.webp
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/sponsors/logo-rodaria.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/sponsors/ZNA.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/sponsors/Tramontina-Logo-New.png
+https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/sponsors/cropped-logo-gran-alimento-png-6.webp
+```
+
+Patrón: `https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/<ruta-en-repo>`.
+
+### C. Cosas que NO tenés que resolver (yo las hago al integrar)
+
+- **Generación del QR** — el webhook responde con `qr_data_url` (base64 PNG). Vos solo mostralo en la pantalla éxito con `<img src={data.qr_data_url}>`.
+- **Envío de email** — n8n lo hace.
+- **PDF de entrada** — n8n lo genera y adjunta al email.
+- **Validación servidor** — n8n re-valida. Vos validá client-side para UX, pero el servidor es la verdad.
+
+### D. Restricciones de WordPress
+
+El HTML va a entrar dentro del editor de WP como bloque HTML custom. Asumí que:
+- **NO** habrá `<html>`, `<head>`, `<body>` en el output final embebido — solo el contenido. Pero **SÍ generá HTML completo con `<head>` para que yo extraiga lo necesario** (title, meta, JSON-LD, fonts) y lo inyecte como meta de la página WP.
+- Tu CSS debe estar scopeado con un wrapper `.nmm-2026 { ... }` que envuelva todo, para no chocar con estilos del theme de Mainter.
+- El JS no debe colisionar con globals del theme. Encerralo en IIFE: `(() => { ... })();`
+- No uses `document.body` ni `document.documentElement` directamente — usá `document.querySelector('.nmm-2026')` como root.
+
+### E. Output deseado para entrega final
+
+Cuando estés conforme con la v5, generá **DOS** Artifacts separados:
+
+1. **`index.html`** — HTML completo con head + body con clase root `.nmm-2026`
+2. **`embed-snippet.html`** — solo el bloque HTML interno (sin `<html>`, sin `<head>`) listo para pegar en WP page editor, con `<style scoped>` y `<script>` al inicio
+
+Esto me ahorra trabajo manual de extracción.
 
 ---
 
