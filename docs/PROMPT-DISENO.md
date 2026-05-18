@@ -383,7 +383,10 @@ Botón submit grande full-width: `Confirmar registro →`.
 5. **Animaciones CSS** primero; JS solo cuando CSS no alcanza.
 6. **JSON-LD `Event` schema completo** en `<head>`.
 7. **OG image** placeholder con `1200x630`.
-8. **Form submit**: `<form id="reg-form">` con `preventDefault()` + `fetch(WEBHOOK_URL, ...)`. Definí `const WEBHOOK_URL = 'PENDIENTE_N8N_URL';` arriba del JS para que yo solo reemplace la string.
+8. **Form submit**: `<form id="reg-form">` con `preventDefault()` + `fetch(WEBHOOK_URL, ...)`. Usar **esta URL directamente** (ya activa):
+   ```js
+   const WEBHOOK_URL = 'https://imaginarte-n8n.rgxmhp.easypanel.host/webhook/nmm-registro';
+   ```
 9. **Campo dinámico**: animar opacity+translateY al cambiar (300ms ease-out).
 10. **Critical CSS inline** (no `<link>` externo en MVP). Yo separo después.
 11. **Comentarios estructurales**: `<!-- ===== SECTION: HERO ===== -->` para facilitar edits.
@@ -394,7 +397,15 @@ Botón submit grande full-width: `Confirmar registro →`.
 
 Esta página termina **embebida en WordPress (mainter.com.bo)**, con CSS/JS servidos vía **jsDelivr CDN desde GitHub**, y submits que van a un **webhook n8n** que escribe en **Google Sheets** y manda email con QR. Asumí estos parámetros al codear:
 
-### A. Form submit payload (este JSON va al webhook)
+### A. Form submit payload (este JSON va al webhook — **YA ACTIVO**)
+
+**Webhook URL en producción** (CORS abierto, devuelve JSON con asignación color/punto/sector):
+
+```
+POST https://imaginarte-n8n.rgxmhp.easypanel.host/webhook/nmm-registro
+```
+
+**Payload de envío** (el form enviá exactamente este shape):
 
 ```javascript
 async function handleSubmit(e) {
@@ -402,16 +413,16 @@ async function handleSubmit(e) {
   const formData = new FormData(e.target);
   const payload = {
     nombre:   formData.get('nombre').trim(),
-    tipo:     formData.get('tipo'),
-    contexto: formData.get('contexto').trim(),
-    whatsapp: formData.get('whatsapp').replace(/\D/g, ''), // solo dígitos
+    tipo:     formData.get('tipo'),                       // estudiante|productor|empresa|institucion|prensa|otro
+    contexto: formData.get('contexto').trim(),            // universidad/zona/empresa/etc según tipo
+    whatsapp: formData.get('whatsapp').replace(/\D/g, ''),
     email:    formData.get('email').trim().toLowerCase(),
     acepta_comunicaciones: formData.get('acepta') === 'on',
     user_agent: navigator.userAgent,
     fuente:   'landing-web'
   };
 
-  const WEBHOOK_URL = 'PENDIENTE_N8N_URL'; // ← reemplazo después
+  const WEBHOOK_URL = 'https://imaginarte-n8n.rgxmhp.easypanel.host/webhook/nmm-registro';
   try {
     setLoading(true);
     const res = await fetch(WEBHOOK_URL, {
@@ -421,7 +432,7 @@ async function handleSubmit(e) {
     });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
-    // data: { ok, id, nombre, color, punto, sector, qr_data_url }
+    // data shape: { ok, id, nombre, tipo, color, punto, sector, qr_data_url, creado_at }
     showSuccess(data);
   } catch (err) {
     showError('No pudimos registrarte. Intentá de nuevo o escribinos por WhatsApp.');
@@ -430,6 +441,35 @@ async function handleSubmit(e) {
   }
 }
 ```
+
+**Respuesta del webhook** (probada con curl, devuelve esto):
+
+```json
+{
+  "ok": true,
+  "id": "b96ebb63-5574-4b39-8a17-5b41cc9d3575",
+  "nombre": "Juan Prueba",
+  "tipo": "productor",
+  "color": "verde",
+  "punto": "N",
+  "sector": "Barbecho · Ultracheval",
+  "qr_data_url": "data:image/svg+xml;utf8,<svg...>QR_STUB</svg>",
+  "creado_at": "2026-05-18T14:57:24.884Z"
+}
+```
+
+⚠️ **El `qr_data_url` actual es un placeholder SVG** ("QR_STUB"). En la versión final del backend (después del diseño), n8n va a devolver un QR PNG real generado con la librería `qrcode`. Tu código frontend tiene que mostrar `data.qr_data_url` en un `<img>` sin importar el contenido — es opaco para el frontend.
+
+**Mapping tipo → color/punto/sector** (el webhook lo hace, esto es informativo):
+
+| tipo (input) | color | punto | sector |
+|---|---|---|---|
+| `estudiante` | azul | E | Pre-emergente · ZethaMaxx |
+| `productor` | verde | N | Barbecho · Ultracheval |
+| `empresa` | amarillo | O | Resistentes · Apresa |
+| `institucion` | rojo | S | Post-emergente · Balón |
+| `prensa` | blanco | - | Acceso prensa lateral |
+| `otro` | gris | - | General |
 
 ### B. Referencias a assets externos (URLs jsDelivr finales)
 
