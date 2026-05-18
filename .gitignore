@@ -1,0 +1,26 @@
+# Credenciales — NUNCA commitear
+all-credentials.json
+*.env
+.env*
+*-secrets*
+*.pem
+*.key
+
+# Skills locales (clonados de terceros, recuperables)
+.claude/skills/
+
+# Build output
+dist/
+build/
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Temp
+/tmp/
+*.log
