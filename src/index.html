@@ -911,17 +911,65 @@ body.page-id-4131 .page-title {
   margin: 0 auto;
 }
 
-/* Fila de 4 cardinales */
+/* Layout cruz (desktop): 3x3 con compass en centro, N arriba, S abajo, W/E laterales */
 .nmm-2026 .grid-cross {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: var(--s-5);
   max-width: var(--max-w);
   margin: 0 auto;
+  align-items: center;
+  grid-template-areas:
+    ".  card-n  ."
+    "card-w  compass card-e"
+    ".  card-s  .";
 }
-.nmm-2026 .grid-cross .compass-center { display: none; }
-@media (max-width: 1024px) { .nmm-2026 .grid-cross { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .nmm-2026 .grid-cross { grid-template-columns: 1fr; } }
+.nmm-2026 .grid-cross .card[data-c="N"] { grid-area: card-n; }
+.nmm-2026 .grid-cross .card[data-c="E"] { grid-area: card-e; }
+.nmm-2026 .grid-cross .card[data-c="S"] { grid-area: card-s; }
+.nmm-2026 .grid-cross .card[data-c="O"] { grid-area: card-w; }
+.nmm-2026 .grid-cross .compass-center {
+  grid-area: compass;
+  display: block;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.nmm-2026 .grid-cross .compass-center img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 36px rgba(27, 14, 72, 0.18));
+}
+
+@media (max-width: 1024px) {
+  .nmm-2026 .grid-cross {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "compass compass"
+      "card-e  card-s"
+      "card-w  card-n";
+  }
+  .nmm-2026 .grid-cross .compass-center { max-width: 260px; }
+}
+@media (max-width: 560px) {
+  .nmm-2026 .grid-cross {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "card-e"
+      "card-s"
+      "card-w"
+      "card-n";
+  }
+  .nmm-2026 .grid-cross .compass-center { display: none; }
+}
 
 .nmm-2026 .card {
   background: var(--bg);
@@ -1677,53 +1725,18 @@ body.page-id-4131 .page-title {
   .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: 1fr; }
 }
 
-/* ===== Mobile half-compass (left edge, half clipped, rotates as speaker enters) ===== */
-.nmm-2026 .mobile-compass-sticky { display: none; }
+/* Compass rotativa removida — cards de orador centrados en mobile */
+.nmm-2026 .mobile-compass-sticky { display: none !important; }
 @media (max-width: 768px) {
-  .nmm-2026 .mobile-compass-sticky {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
-    z-index: 6;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 320ms ease, visibility 0s linear 320ms;
-    filter: drop-shadow(0 14px 32px rgba(27, 14, 72, 0.22));
-    will-change: opacity;
+  .nmm-2026 .speakers .speaker-block .wrap {
+    grid-template-columns: 1fr;
+    padding: var(--s-5) var(--pad);
+    text-align: center;
+    justify-items: center;
   }
-  .nmm-2026 .mobile-compass-sticky.is-visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 320ms ease, visibility 0s linear 0s;
-  }
-  .nmm-2026 .mc-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .nmm-2026 .mc-rose {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: rotate(var(--mc-angle, 0deg));
-    transform-origin: 50% 50%;
-  }
-  /* Badge removed — compass rotation alone communicates the cardinal */
-  .nmm-2026 .mc-pointer,
-  .nmm-2026 .mc-arrow,
-  .nmm-2026 .mc-cardinal,
-  .nmm-2026 .mc-order { display: none; }
-
-  /* Speaker cards shift right slightly so the visible half-compass doesn't overlap photo */
-  .nmm-2026 .speakers .speaker-block .wrap { padding-left: clamp(96px, 26vw, 132px); }
+  .nmm-2026 .speakers .speaker-block .photo-col,
+  .nmm-2026 .speakers .speaker-block .info-col { width: 100%; max-width: 360px; margin: 0 auto; }
+  .nmm-2026 .speakers .speaker-block .country { justify-content: center; }
   .nmm-2026 .speakers .head { padding-bottom: var(--s-3); }
   .nmm-2026 .speaker-block { scroll-margin-top: 24px; }
 }
@@ -1855,7 +1868,7 @@ body.page-id-4131 .page-title {
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="compass-wrap" aria-hidden="true">
-    <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/brujula/brujula-rosa-vientos.png" alt="">
+    <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Brujula%20Ok/1x/Recurso%208.png" alt="">
   </div>
   <div class="container">
     <h1 class="sr-only">7° Congreso Internacional No Más Malezas 2026 — MAINTER</h1>
@@ -2104,18 +2117,6 @@ body.page-id-4131 .page-title {
     <p class="eyebrow">Disertantes</p>
     <h2 style="margin-top:16px">Cuatro voces. Cuatro miradas.<br>Un mismo rumbo.</h2>
     <p class="lead">Expertos del agro boliviano reunidos por primera vez para abordar los desafíos reales del lote.</p>
-  </div>
-
-  <!-- Mobile compass sticky (visible only on mobile) -->
-  <div class="mobile-compass-sticky" aria-hidden="true">
-    <div class="mc-wrap">
-      <img class="mc-rose" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Brujula%20Ok/1x/Recurso%208.png" alt="">
-      <div class="mc-pointer" data-current="E">
-        <div class="mc-arrow" aria-hidden="true"></div>
-        <div class="mc-cardinal">ESTE</div>
-        <div class="mc-order">1°</div>
-      </div>
-    </div>
   </div>
 
   <!-- 1° ESTE · Pedro Christoffoleti · Brasil · foto IZQ -->
@@ -2536,72 +2537,6 @@ body.page-id-4131 .page-title {
       if (e.key === 'Escape' ? drawer.classList.contains('open') : false) closeDrawer();
     });
   }
-})();
-</script>
-
-<!-- ===== Mobile sticky compass rotation (IntersectionObserver) ===== -->
-<script>
-(() => {
-  const sticky = document.querySelector('.nmm-2026 .mobile-compass-sticky');
-  if (!sticky) return;
-  if (!window.matchMedia('(max-width: 768px)').matches) return;
-
-  const rose = sticky.querySelector('.mc-rose');
-  const pointer = sticky.querySelector('.mc-pointer');
-  const cardinalEl = sticky.querySelector('.mc-cardinal');
-  const orderEl = sticky.querySelector('.mc-order');
-  if (!rose || !pointer) return;
-
-  // Rotation so the active cardinal letter on the rose graphic ends at 3 o'clock
-  // (right side of compass = where speaker card is, on visible half).
-  // Default rose: N=top, E=right, S=bottom, O=left → rotate clockwise X° to put cardinal at right.
-  const META = {
-    E: { angle:    0, label: 'ESTE',  order: '1°' },  // E already right
-    S: { angle:  -90, label: 'SUR',   order: '2°' },  // S to right (CCW 90)
-    O: { angle:  180, label: 'OESTE', order: '3°' },  // O to right (180)
-    N: { angle:   90, label: 'NORTE', order: '4°' },  // N to right (CW 90)
-  };
-  const blocks = Array.from(document.querySelectorAll('.nmm-2026 .speakers .speaker-block'));
-  const speakers = document.querySelector('.nmm-2026 .speakers');
-  if (blocks.length === 0 || !speakers) return;
-
-  let current = null;
-  function applyCardinal(c) {
-    if (c === current) return;
-    current = c;
-    const meta = META[c];
-    if (!meta) return;
-    rose.style.setProperty('--mc-angle', meta.angle + 'deg');
-    pointer.dataset.current = c;
-    if (cardinalEl) cardinalEl.textContent = meta.label;
-    if (orderEl) orderEl.textContent = meta.order;
-  }
-
-  // Show/hide compass when speakers section enters viewport
-  const sectionIo = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      sticky.classList.toggle('is-visible', e.isIntersecting);
-    });
-  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
-  sectionIo.observe(speakers);
-
-  // Track which speaker card center is closest to viewport mid
-  const blockIo = new IntersectionObserver((entries) => {
-    const visible = entries.filter(e => e.isIntersecting);
-    if (visible.length === 0) return;
-    const mid = window.innerHeight / 2;
-    let best = null, bestDist = Infinity;
-    for (const e of visible) {
-      const r = e.target.getBoundingClientRect();
-      const cMid = r.top + r.height / 2;
-      const d = Math.abs(cMid - mid);
-      if (d < bestDist) { bestDist = d; best = e.target; }
-    }
-    if (best) applyCardinal(best.dataset.c);
-  }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-15% 0px -35% 0px' });
-  blocks.forEach(b => blockIo.observe(b));
-
-  applyCardinal(blocks[0].dataset.c);
 })();
 </script>
 
