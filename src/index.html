@@ -1725,12 +1725,31 @@ body.page-id-4131 .page-title {
 .nmm-2026 .sponsors-grid .sg-slot-wide { aspect-ratio: 21 / 9; }
 .nmm-2026 .sg-grupo .eyebrow { color: var(--gold-deep); }
 @media (max-width: 768px) {
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"] { grid-template-columns: repeat(2, 1fr); }
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: repeat(2, 1fr); }
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"],
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 100%;
+  }
+  .nmm-2026 .sponsors-grid .sg-slot {
+    aspect-ratio: 4 / 3;
+    padding: 10px;
+    border-radius: var(--r-sm);
+  }
+  .nmm-2026 .sponsors-grid .sg-slot-wide {
+    aspect-ratio: 16 / 7;
+    padding: 14px 18px;
+  }
+  .nmm-2026 .sponsors-grid .sg-title { font-size: clamp(15px, 4.5vw, 18px); }
+  .nmm-2026 .sponsors-grid .sg-block { margin-bottom: 32px; }
 }
 @media (max-width: 420px) {
   .nmm-2026 .sponsors-grid .sg-row[data-cols="4"],
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: 1fr; }
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .nmm-2026 .sponsors-grid .sg-slot { padding: 8px; }
 }
 
 /* Compass rotativa removida — cards de orador centrados + compactos en mobile */
