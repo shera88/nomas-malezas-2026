@@ -1685,14 +1685,18 @@ body.page-id-4131 .page-title {
   max-width: 720px;
 }
 .nmm-2026 .sponsors-grid .sg-row {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--s-4);
   max-width: 920px;
   margin: 0 auto;
 }
-.nmm-2026 .sponsors-grid .sg-row[data-cols="4"] { grid-template-columns: repeat(4, 1fr); }
-.nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: repeat(3, 1fr); max-width: 720px; }
-.nmm-2026 .sponsors-grid .sg-row[data-cols="1"] { grid-template-columns: 1fr; max-width: 420px; }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="4"] .sg-slot { flex: 0 1 calc(25% - var(--s-4)); }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { max-width: 720px; }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="3"] .sg-slot { flex: 0 1 calc(33.333% - var(--s-4)); }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="1"] { max-width: 420px; }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="1"] .sg-slot { flex: 0 1 100%; }
 .nmm-2026 .sponsors-grid .sg-slot {
   aspect-ratio: 16 / 9;
   border-radius: var(--r-md);
@@ -1701,12 +1705,18 @@ body.page-id-4131 .page-title {
   justify-content: center;
   background: #ffffff;
   padding: clamp(16px, 2vw, 24px);
-  box-shadow: 0 1px 2px rgba(27, 14, 72, 0.06);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 14px rgba(27, 14, 72, 0.10),
+    0 18px 36px rgba(27, 14, 72, 0.08);
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 .nmm-2026 .sponsors-grid .sg-slot:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(27, 14, 72, 0.10);
+  transform: translateY(-3px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(27, 14, 72, 0.14),
+    0 28px 52px rgba(27, 14, 72, 0.10);
 }
 .nmm-2026 .sponsors-grid .sg-slot img {
   max-width: 100%;
@@ -1725,11 +1735,13 @@ body.page-id-4131 .page-title {
 .nmm-2026 .sponsors-grid .sg-slot-wide { aspect-ratio: 21 / 9; }
 .nmm-2026 .sg-grupo .eyebrow { color: var(--gold-deep); }
 @media (max-width: 768px) {
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"],
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] {
-    grid-template-columns: repeat(3, 1fr);
+  .nmm-2026 .sponsors-grid .sg-row {
     gap: 10px;
     max-width: 100%;
+  }
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"] .sg-slot,
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] .sg-slot {
+    flex: 0 1 calc(33.333% - 10px);
   }
   .nmm-2026 .sponsors-grid .sg-slot {
     aspect-ratio: 4 / 3;
@@ -1744,25 +1756,12 @@ body.page-id-4131 .page-title {
   .nmm-2026 .sponsors-grid .sg-block { margin-bottom: 32px; }
 }
 @media (max-width: 420px) {
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"],
-  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"] .sg-slot,
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] .sg-slot {
+    flex: 0 1 calc(50% - 5px);
   }
+  .nmm-2026 .sponsors-grid .sg-row { gap: 8px; }
   .nmm-2026 .sponsors-grid .sg-slot { padding: 8px; }
-  /* Odd-count grids: last item alone → span 2 cols, max-width 50%, centered (skip 1-col rows) */
-  .nmm-2026 .sponsors-grid .sg-row:not([data-cols="1"]) .sg-slot:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 4px);
-  }
-}
-@media (max-width: 768px) and (min-width: 421px) {
-  .nmm-2026 .sponsors-grid .sg-row:not([data-cols="1"]) .sg-slot:last-child:nth-child(3n+1) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(33.333% - 7px);
-  }
 }
 
 /* Compass rotativa removida — cards de orador centrados + compactos en mobile */
