@@ -45,6 +45,49 @@
    Scope: .nmm-2026 wrapper para no chocar con tema WordPress
    ========================================================================== */
 
+/* ===== Hide WP theme (YOOtheme/Warp) chrome on page 4131 ===== */
+/* Header / toolbar / navbar */
+body.page-id-4131 .tm-toolbar,
+body.page-id-4131 .tm-navbar,
+body.page-id-4131 .tm-headerbar,
+body.page-id-4131 .tm-header,
+body.page-id-4131 #tm-top-a,
+body.page-id-4131 #tm-top-b,
+body.page-id-4131 #tm-header,
+body.page-id-4131 .uk-offcanvas,
+body.page-id-4131 #offcanvas,
+/* Footer */
+body.page-id-4131 .tm-footer,
+body.page-id-4131 #tm-footer,
+body.page-id-4131 #tm-bottom-a,
+body.page-id-4131 #tm-bottom-b,
+body.page-id-4131 #tm-bottom-c,
+body.page-id-4131 .tm-bottom,
+/* WhatsApp Click-to-Chat plugin */
+body.page-id-4131 #ht-ctc-chat,
+body.page-id-4131 .ht-ctc,
+body.page-id-4131 .ht-ctc-chat,
+body.page-id-4131 .ctc-analytics,
+/* Generic WhatsApp floaters */
+body.page-id-4131 #wpfront-scroll-top-container,
+body.page-id-4131 .joinchat,
+body.page-id-4131 a[href*="wa.me"],
+body.page-id-4131 a[href*="whatsapp.com/send"],
+body.page-id-4131 a[href*="api.whatsapp.com"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.page-id-4131 { padding-top: 0 !important; margin: 0 !important; }
+body.page-id-4131 .tm-main,
+body.page-id-4131 .tm-middle,
+body.page-id-4131 .uk-container,
+body.page-id-4131 .uk-container-center {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
 .nmm-2026, .nmm-2026 *, .nmm-2026 *::before, .nmm-2026 *::after {
   box-sizing: border-box;
 }
@@ -1521,6 +1564,158 @@
 
 .nmm-2026 ::selection { background: var(--gold); color: var(--bg-dark); }
 .nmm-2026 :focus-visible { outline: 2px solid var(--bg-dark); outline-offset: 2px; }
+
+/* ===== Cardinales additions ===== */
+.nmm-2026 .card .card-order {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--card-color, var(--gold-deep));
+  opacity: 0.85;
+}
+.nmm-2026 .compass-center {
+  position: relative;
+}
+.nmm-2026 .compass-center .eje-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-3);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+  pointer-events: none;
+}
+.nmm-2026 .compass-center .eje-num {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--gold-deep);
+}
+.nmm-2026 .compass-center .eje-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--bg-dark);
+}
+
+/* ===== Sponsors grid (placeholder until logos arrive) ===== */
+.nmm-2026 .sponsors-grid {
+  padding: clamp(64px, 9vw, 120px) 0 clamp(40px, 6vw, 80px);
+  background: var(--bg);
+}
+.nmm-2026 .sponsors-grid .sg-block { margin-bottom: clamp(48px, 6vw, 80px); }
+.nmm-2026 .sponsors-grid .sg-block:last-child { margin-bottom: 0; }
+.nmm-2026 .sponsors-grid .eyebrow {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.nmm-2026 .sponsors-grid .sg-title {
+  text-align: center;
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 auto var(--s-6);
+  color: var(--bg-dark);
+  max-width: 720px;
+}
+.nmm-2026 .sponsors-grid .sg-row {
+  display: grid;
+  gap: var(--s-4);
+  max-width: 920px;
+  margin: 0 auto;
+}
+.nmm-2026 .sponsors-grid .sg-row[data-cols="4"] { grid-template-columns: repeat(4, 1fr); }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: repeat(3, 1fr); max-width: 720px; }
+.nmm-2026 .sponsors-grid .sg-row[data-cols="1"] { grid-template-columns: 1fr; max-width: 420px; }
+.nmm-2026 .sponsors-grid .sg-slot {
+  aspect-ratio: 16 / 9;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-soft);
+  transition: border-color 200ms ease, background 200ms ease;
+}
+.nmm-2026 .sponsors-grid .sg-slot:hover {
+  border-color: var(--gold);
+  background: rgba(245, 184, 46, 0.04);
+}
+.nmm-2026 .sponsors-grid .sg-slot span {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-weight: 500;
+}
+.nmm-2026 .sponsors-grid .sg-slot-wide { aspect-ratio: 21 / 9; }
+.nmm-2026 .sg-grupo .eyebrow { color: var(--gold-deep); }
+@media (max-width: 768px) {
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"] { grid-template-columns: repeat(2, 1fr); }
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="4"],
+  .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: 1fr; }
+}
+
+/* ===== Mobile half-compass (left edge, half clipped, rotates as speaker enters) ===== */
+.nmm-2026 .mobile-compass-sticky { display: none; }
+@media (max-width: 768px) {
+  .nmm-2026 .mobile-compass-sticky {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 320ms ease, visibility 0s linear 320ms;
+    filter: drop-shadow(0 14px 32px rgba(27, 14, 72, 0.22));
+    will-change: opacity;
+  }
+  .nmm-2026 .mobile-compass-sticky.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 320ms ease, visibility 0s linear 0s;
+  }
+  .nmm-2026 .mc-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .nmm-2026 .mc-rose {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform: rotate(var(--mc-angle, 0deg));
+    transform-origin: 50% 50%;
+  }
+  /* Badge removed — compass rotation alone communicates the cardinal */
+  .nmm-2026 .mc-pointer,
+  .nmm-2026 .mc-arrow,
+  .nmm-2026 .mc-cardinal,
+  .nmm-2026 .mc-order { display: none; }
+
+  /* Speaker cards shift right slightly so the visible half-compass doesn't overlap photo */
+  .nmm-2026 .speakers .speaker-block .wrap { padding-left: clamp(96px, 26vw, 132px); }
+  .nmm-2026 .speakers .head { padding-bottom: var(--s-3); }
+  .nmm-2026 .speaker-block { scroll-margin-top: 24px; }
+}
 </style>
 </head>
 <body>
@@ -1691,7 +1886,6 @@
     <p class="eyebrow" style="margin-bottom:24px">Manifiesto</p>
     <h2>Hoy el productor no está fallando <span class="strike">por falta de productos.</span><br>Está fallando por <span class="accent">falta de dirección clara.</span></h2>
     <p class="lead">Demasiadas opciones. Clima cambiante. Presión creciente de malezas. El resultado: decisiones desordenadas y lotes perdidos. Este año proponemos algo distinto.</p>
-    <p class="frase">"Este año, MAINTER no trae un congreso.<br>Trae una <em style="font-style:normal;color:var(--bg-dark)">brújula</em>."</p>
   </div>
 </section>
 
@@ -1707,59 +1901,65 @@
     <div class="grid-cross">
       <div class="compass-center" aria-hidden="true">
         <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Brujula%20Ok/1x/Recurso%208.png" alt="">
+        <div class="eje-label"><span class="eje-num">5°</span><span class="eje-text">EJE · MAINTER</span></div>
       </div>
+
+      <!-- 4° NORTE — Pablo Franco (Bolivia) -->
       <a class="card" href="#speaker-N" data-c="N">
+        <div class="card-order">4°</div>
         <div class="letter">N</div>
         <div class="cardinal-name">Norte</div>
-        <h3>Manejo de Barbecho</h3>
-        <div class="producto">Ultracheval</div>
-        <div class="speaker">
-          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pedro-christoffoleti-600.webp" alt="Pedro Christoffoleti">
-          <div>
-            <div class="name">Pedro Christoffoleti</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%206.png" alt="" width="22" height="22"> Brasil</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="card" href="#speaker-E" data-c="E">
-        <div class="letter">E</div>
-        <div class="cardinal-name">Este</div>
-        <h3>Pre-emergente</h3>
-        <div class="producto">ZethaMaxx</div>
-        <div class="speaker">
-          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/lucas-paterlini-600.webp" alt="Lucas Paterlini">
-          <div>
-            <div class="name">Lucas Paterlini</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%205.png" alt="" width="22" height="22"> Argentina</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="card" href="#speaker-S" data-c="S">
-        <div class="letter">S</div>
-        <div class="cardinal-name">Sur</div>
-        <h3>Post-emergente</h3>
-        <div class="producto">Balón</div>
-        <div class="speaker">
-          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/paraguay-placeholder-600.webp" alt="Disertante Paraguay">
-          <div>
-            <div class="name">A confirmar</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%204.png" alt="" width="22" height="22"> Paraguay</div>
-          </div>
-        </div>
-      </a>
-
-      <a class="card" href="#speaker-O" data-c="O">
-        <div class="letter">O</div>
-        <div class="cardinal-name">Oeste</div>
-        <h3>Malezas Resistentes</h3>
-        <div class="producto">Apresa</div>
+        <h3>Resistentes en Bolivia</h3>
         <div class="speaker">
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pablo-franco-600.webp" alt="Pablo Franco">
           <div>
             <div class="name">Pablo Franco</div>
             <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%201.png" alt="" width="22" height="22"> Bolivia</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 1° ESTE — Pedro Christoffoleti (Brasil) -->
+      <a class="card" href="#speaker-E" data-c="E">
+        <div class="card-order">1°</div>
+        <div class="letter">E</div>
+        <div class="cardinal-name">Este</div>
+        <h3>Barbecho · Estrategia integral</h3>
+        <div class="speaker">
+          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pedro-christoffoleti-600.webp" alt="Pedro Christoffoleti">
+          <div>
+            <div class="name">Dr. Pedro Christoffoleti</div>
+            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%206.png" alt="" width="22" height="22"> Brasil</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2° SUR — Lucas Paterlini (Argentina) -->
+      <a class="card" href="#speaker-S" data-c="S">
+        <div class="card-order">2°</div>
+        <div class="letter">S</div>
+        <div class="cardinal-name">Sur</div>
+        <h3>Herbicidas pre-emergentes</h3>
+        <div class="speaker">
+          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/lucas-paterlini-600.webp" alt="Lucas Paterlini">
+          <div>
+            <div class="name">Ing. Lucas Paterlini</div>
+            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%205.png" alt="" width="22" height="22"> Argentina</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3° OESTE — Marco Mendoza (Paraguay) -->
+      <a class="card" href="#speaker-O" data-c="O">
+        <div class="card-order">3°</div>
+        <div class="letter">O</div>
+        <div class="cardinal-name">Oeste</div>
+        <h3>Resistentes en Paraguay</h3>
+        <div class="speaker">
+          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/paraguay-placeholder-600.webp" alt="Marco Mendoza">
+          <div>
+            <div class="name">Ing. Marco Mendoza, PhD</div>
+            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%204.png" alt="" width="22" height="22"> Paraguay</div>
           </div>
         </div>
       </a>
@@ -1892,83 +2092,130 @@
   <div class="head">
     <p class="eyebrow">Disertantes</p>
     <h2 style="margin-top:16px">Cuatro voces. Cuatro miradas.<br>Un mismo rumbo.</h2>
-    <p class="lead">Expertos internacionales reunidos por primera vez para abordar los desafíos reales del lote boliviano.</p>
+    <p class="lead">Expertos del agro boliviano reunidos por primera vez para abordar los desafíos reales del lote.</p>
   </div>
 
-  <!-- N · Pedro · foto IZQ -->
-  <div class="speaker-block" id="speaker-N" data-c="N">
+  <!-- Mobile compass sticky (visible only on mobile) -->
+  <div class="mobile-compass-sticky" aria-hidden="true">
+    <div class="mc-wrap">
+      <img class="mc-rose" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Brujula%20Ok/1x/Recurso%208.png" alt="">
+      <div class="mc-pointer" data-current="E">
+        <div class="mc-arrow" aria-hidden="true"></div>
+        <div class="mc-cardinal">ESTE</div>
+        <div class="mc-order">1°</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1° ESTE · Pedro Christoffoleti · Brasil · foto IZQ -->
+  <div class="speaker-block" id="speaker-E" data-c="E" data-order="1">
     <div class="wrap">
       <div class="photo-col">
         <div class="photo-frame">
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pedro-christoffoleti-600.webp" alt="Pedro Christoffoleti">
-          <div class="letter-badge">N</div>
+          <div class="letter-badge">E</div>
         </div>
       </div>
       <div class="info-col">
-        <span class="role">Norte · Manejo de Barbecho</span>
-        <h3>Pedro Christoffoleti</h3>
+        <span class="role">1° · Este · Barbecho</span>
+        <h3>Dr. Pedro Christoffoleti</h3>
         <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%206.png" alt="" width="22" height="22"> Brasil</div>
-        <p class="bio">Referente internacional en manejo integrado de malezas. Su investigación define los protocolos de barbecho que hoy aplican miles de productores en toda Sudamérica.</p>
-        <span class="meta"><span class="dot"></span>Producto: Ultracheval</span>
+        <p class="bio">Especialista en manejo de malezas. Referente internacional cuyos protocolos de barbecho aplican miles de productores en toda Sudamérica.</p>
+        <span class="meta"><span class="dot"></span>Disertación: Manejo y control estratégico de malezas en Barbecho</span>
       </div>
     </div>
   </div>
 
-  <!-- E · Lucas · foto DER (alt) -->
-  <div class="speaker-block alt" id="speaker-E" data-c="E">
+  <!-- 2° SUR · Lucas Paterlini · Argentina · foto DER (alt) -->
+  <div class="speaker-block alt" id="speaker-S" data-c="S" data-order="2">
     <div class="wrap">
       <div class="info-col">
-        <span class="role">Este · Pre-emergente</span>
-        <h3>Lucas Paterlini</h3>
+        <span class="role">2° · Sur · Pre-emergente</span>
+        <h3>Ing. Lucas Paterlini</h3>
         <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%205.png" alt="" width="22" height="22"> Argentina</div>
-        <p class="bio">Especialista en aplicaciones pre-emergentes y tecnologías de control anticipado. Traduce ciencia avanzada en decisiones simples para el productor en campo.</p>
-        <span class="meta"><span class="dot"></span>Producto: ZethaMaxx</span>
+        <p class="bio">Asesor privado especialista en manejo de malezas difíciles. Traduce ciencia avanzada en decisiones simples para el productor en campo.</p>
+        <span class="meta"><span class="dot"></span>Disertación: Manejo de Herbicidas Pre-emergentes</span>
       </div>
       <div class="photo-col">
         <div class="photo-frame">
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/lucas-paterlini-600.webp" alt="Lucas Paterlini">
-          <div class="letter-badge">E</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- S · Paraguay · foto IZQ -->
-  <div class="speaker-block" id="speaker-S" data-c="S">
-    <div class="wrap">
-      <div class="photo-col">
-        <div class="photo-frame">
-          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/paraguay-placeholder-600.webp" alt="Disertante Paraguay">
           <div class="letter-badge">S</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- 3° OESTE · Marco Mendoza · Paraguay · foto IZQ -->
+  <div class="speaker-block" id="speaker-O" data-c="O" data-order="3">
+    <div class="wrap">
+      <div class="photo-col">
+        <div class="photo-frame">
+          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/marco-mendoza-600.webp" alt="Marco Mendoza" loading="lazy">
+          <div class="letter-badge">O</div>
+        </div>
+      </div>
       <div class="info-col">
-        <span class="role">Sur · Post-emergente</span>
-        <h3>A confirmar</h3>
+        <span class="role">3° · Oeste · Resistentes</span>
+        <h3>Ing. Marco Mendoza, PhD</h3>
         <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%204.png" alt="" width="22" height="22"> Paraguay</div>
-        <p class="bio">Experto regional en control post-emergente y estrategias de rescate de cultivos. El cuarto disertante será anunciado próximamente.</p>
-        <span class="meta"><span class="dot"></span>Producto: Balón</span>
+        <p class="bio">Responsable de Desarrollo de Mercado de FMC en Paraguay. Experiencia regional en control de malezas resistentes y estrategias de rescate de cultivos.</p>
+        <span class="meta"><span class="dot"></span>Disertación: Malezas resistentes en Paraguay</span>
       </div>
     </div>
   </div>
 
-  <!-- O · Pablo · foto DER (alt) -->
-  <div class="speaker-block alt" id="speaker-O" data-c="O">
+  <!-- 4° NORTE · Pablo Franco · Bolivia · foto DER (alt) -->
+  <div class="speaker-block alt" id="speaker-N" data-c="N" data-order="4">
     <div class="wrap">
       <div class="info-col">
-        <span class="role">Oeste · Malezas Resistentes</span>
-        <h3>Pablo Franco</h3>
+        <span class="role">4° · Norte · Resistentes</span>
+        <h3>Ing. Agr. M.Sc. Pablo Franco</h3>
         <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%201.png" alt="" width="22" height="22"> Bolivia</div>
-        <p class="bio">Experiencia local en malezas resistentes y estrategias para revertir poblaciones difíciles. Voz boliviana que conoce el lote nacional de adentro hacia afuera.</p>
-        <span class="meta"><span class="dot"></span>Producto: Apresa</span>
+        <p class="bio">Especialista boliviano en control de malezas. Experiencia local con poblaciones resistentes y estrategias adaptadas al lote nacional.</p>
+        <span class="meta"><span class="dot"></span>Disertación: Malezas resistentes en Bolivia</span>
       </div>
       <div class="photo-col">
         <div class="photo-frame">
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pablo-franco-600.webp" alt="Pablo Franco">
-          <div class="letter-badge">O</div>
+          <div class="letter-badge">N</div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== AUSPICIADORES + APOYO + GRUPO (placeholders — logos llegan después) ===== -->
+<section class="sponsors-grid">
+  <div class="container">
+
+    <div class="sg-block">
+      <p class="eyebrow">Auspiciadores</p>
+      <h3 class="sg-title">Marcas que acompañan el congreso</h3>
+      <div class="sg-row" data-cols="4">
+        <div class="sg-slot"><span>Próximamente</span></div>
+        <div class="sg-slot"><span>Próximamente</span></div>
+        <div class="sg-slot"><span>Próximamente</span></div>
+        <div class="sg-slot"><span>Próximamente</span></div>
+      </div>
+    </div>
+
+    <div class="sg-block">
+      <p class="eyebrow">Con el apoyo de</p>
+      <h3 class="sg-title">Aliados estratégicos</h3>
+      <div class="sg-row" data-cols="3">
+        <div class="sg-slot"><span>Próximamente</span></div>
+        <div class="sg-slot"><span>Próximamente</span></div>
+        <div class="sg-slot"><span>Próximamente</span></div>
+      </div>
+    </div>
+
+    <div class="sg-block sg-grupo">
+      <p class="eyebrow">Somos parte del grupo</p>
+      <div class="sg-row" data-cols="1">
+        <div class="sg-slot sg-slot-wide"><span>Próximamente</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2278,6 +2525,72 @@
       if (e.key === 'Escape' ? drawer.classList.contains('open') : false) closeDrawer();
     });
   }
+})();
+</script>
+
+<!-- ===== Mobile sticky compass rotation (IntersectionObserver) ===== -->
+<script>
+(() => {
+  const sticky = document.querySelector('.nmm-2026 .mobile-compass-sticky');
+  if (!sticky) return;
+  if (!window.matchMedia('(max-width: 768px)').matches) return;
+
+  const rose = sticky.querySelector('.mc-rose');
+  const pointer = sticky.querySelector('.mc-pointer');
+  const cardinalEl = sticky.querySelector('.mc-cardinal');
+  const orderEl = sticky.querySelector('.mc-order');
+  if (!rose || !pointer) return;
+
+  // Rotation so the active cardinal letter on the rose graphic ends at 3 o'clock
+  // (right side of compass = where speaker card is, on visible half).
+  // Default rose: N=top, E=right, S=bottom, O=left → rotate clockwise X° to put cardinal at right.
+  const META = {
+    E: { angle:    0, label: 'ESTE',  order: '1°' },  // E already right
+    S: { angle:  -90, label: 'SUR',   order: '2°' },  // S to right (CCW 90)
+    O: { angle:  180, label: 'OESTE', order: '3°' },  // O to right (180)
+    N: { angle:   90, label: 'NORTE', order: '4°' },  // N to right (CW 90)
+  };
+  const blocks = Array.from(document.querySelectorAll('.nmm-2026 .speakers .speaker-block'));
+  const speakers = document.querySelector('.nmm-2026 .speakers');
+  if (blocks.length === 0 || !speakers) return;
+
+  let current = null;
+  function applyCardinal(c) {
+    if (c === current) return;
+    current = c;
+    const meta = META[c];
+    if (!meta) return;
+    rose.style.setProperty('--mc-angle', meta.angle + 'deg');
+    pointer.dataset.current = c;
+    if (cardinalEl) cardinalEl.textContent = meta.label;
+    if (orderEl) orderEl.textContent = meta.order;
+  }
+
+  // Show/hide compass when speakers section enters viewport
+  const sectionIo = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      sticky.classList.toggle('is-visible', e.isIntersecting);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+  sectionIo.observe(speakers);
+
+  // Track which speaker card center is closest to viewport mid
+  const blockIo = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length === 0) return;
+    const mid = window.innerHeight / 2;
+    let best = null, bestDist = Infinity;
+    for (const e of visible) {
+      const r = e.target.getBoundingClientRect();
+      const cMid = r.top + r.height / 2;
+      const d = Math.abs(cMid - mid);
+      if (d < bestDist) { bestDist = d; best = e.target; }
+    }
+    if (best) applyCardinal(best.dataset.c);
+  }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-15% 0px -35% 0px' });
+  blocks.forEach(b => blockIo.observe(b));
+
+  applyCardinal(blocks[0].dataset.c);
 })();
 </script>
 
