@@ -1750,6 +1750,19 @@ body.page-id-4131 .page-title {
     gap: 8px;
   }
   .nmm-2026 .sponsors-grid .sg-slot { padding: 8px; }
+  /* Odd-count grids: last item alone → span 2 cols, max-width 50%, centered (skip 1-col rows) */
+  .nmm-2026 .sponsors-grid .sg-row:not([data-cols="1"]) .sg-slot:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 4px);
+  }
+}
+@media (max-width: 768px) and (min-width: 421px) {
+  .nmm-2026 .sponsors-grid .sg-row:not([data-cols="1"]) .sg-slot:last-child:nth-child(3n+1) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(33.333% - 7px);
+  }
 }
 
 /* Compass rotativa removida — cards de orador centrados + compactos en mobile */
