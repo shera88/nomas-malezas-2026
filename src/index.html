@@ -1725,18 +1725,39 @@ body.page-id-4131 .page-title {
   .nmm-2026 .sponsors-grid .sg-row[data-cols="3"] { grid-template-columns: 1fr; }
 }
 
-/* Compass rotativa removida — cards de orador centrados en mobile */
+/* Compass rotativa removida — cards de orador centrados + compactos en mobile */
 .nmm-2026 .mobile-compass-sticky { display: none !important; }
 @media (max-width: 768px) {
   .nmm-2026 .speakers .speaker-block .wrap {
     grid-template-columns: 1fr;
-    padding: var(--s-5) var(--pad);
+    padding: clamp(20px, 5vw, 28px) var(--pad);
     text-align: center;
     justify-items: center;
+    gap: 12px;
   }
-  .nmm-2026 .speakers .speaker-block .photo-col,
-  .nmm-2026 .speakers .speaker-block .info-col { width: 100%; max-width: 360px; margin: 0 auto; }
-  .nmm-2026 .speakers .speaker-block .country { justify-content: center; }
+  .nmm-2026 .speakers .speaker-block .photo-col { width: 100%; max-width: 200px; margin: 0 auto; }
+  .nmm-2026 .speakers .speaker-block .photo-frame { max-width: 200px; }
+  .nmm-2026 .speakers .speaker-block .photo-frame img { aspect-ratio: 1/1; object-fit: cover; }
+  .nmm-2026 .speakers .speaker-block .info-col { width: 100%; max-width: 320px; margin: 0 auto; }
+  .nmm-2026 .speakers .speaker-block .country { justify-content: center; font-size: 12px; }
+  .nmm-2026 .speakers .info-col .role { font-size: 10px; letter-spacing: 0.14em; }
+  .nmm-2026 .speakers .info-col h3 {
+    font-size: clamp(18px, 5vw, 22px);
+    line-height: 1.15;
+    margin: 4px 0 6px;
+  }
+  .nmm-2026 .speakers .info-col .bio {
+    font-size: 13px;
+    line-height: 1.45;
+    margin: 8px 0;
+  }
+  .nmm-2026 .speakers .info-col .meta {
+    font-size: 11px;
+    padding: 8px 14px;
+    line-height: 1.35;
+  }
+  .nmm-2026 .speakers .head h2 { font-size: clamp(20px, 5.4vw, 26px); }
+  .nmm-2026 .speakers .head .lead { font-size: 13px; line-height: 1.5; }
   .nmm-2026 .speakers .head { padding-bottom: var(--s-3); }
   .nmm-2026 .speaker-block { scroll-margin-top: 24px; }
 }
@@ -1886,7 +1907,7 @@ body.page-id-4131 .page-title {
     </div>
 
     <div class="stats">
-      <div class="item"><div class="num">1,200</div><div class="label">Asistentes</div></div>
+      <div class="item"><div class="num">1,000</div><div class="label">Asistentes</div></div>
       <div class="item"><div class="num">4</div><div class="label">Disertantes</div></div>
       <div class="item"><div class="num">4</div><div class="label">Países</div></div>
       <div class="item"><div class="num">14:00</div><div class="label">Hora de inicio</div></div>
