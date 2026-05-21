@@ -847,45 +847,66 @@ body.page-id-4131 .page-title {
 /* ==========================================================================
    MANIFIESTO
    ========================================================================== */
-.nmm-2026 .manifesto {
+.nmm-2026 .orientando {
   padding: clamp(80px, 12vw, 160px) 0;
   text-align: center;
 }
-.nmm-2026 .manifesto h2 {
-  font-size: clamp(22px, 3.4vw, 40px);
+.nmm-2026 .orientando .eyebrow { margin-bottom: var(--s-3); }
+.nmm-2026 .orientando-title {
+  font-size: clamp(26px, 4vw, 48px);
   max-width: 880px;
-  margin: 0 auto var(--s-6);
+  margin: 0 auto var(--s-7);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.15;
+  color: var(--bg-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
-.nmm-2026 .manifesto h2 .strike { color: var(--text-3); font-weight: 500; }
-.nmm-2026 .manifesto h2 .accent { color: var(--bg-dark); font-weight: 500; }
-.nmm-2026 .manifesto .lead {
-  font-size: clamp(17px, 2vw, 20px);
-  color: var(--text-2);
-  max-width: 680px;
-  margin: 0 auto var(--s-6);
-  line-height: 1.6;
+.nmm-2026 .orientando-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 1.6vw, 22px);
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.nmm-2026 .manifesto .frase {
+.nmm-2026 .o-card {
+  position: relative;
+  margin: 0;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 1350 / 1080;
+  box-shadow: 0 12px 32px rgba(27,14,72,0.18);
+  transform: translateZ(0);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.nmm-2026 .o-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(27,14,72,0.28);
+}
+.nmm-2026 .o-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.nmm-2026 .orientando-cta {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(18px, 2.2vw, 24px);
+  font-size: clamp(20px, 2.4vw, 28px);
   font-weight: 500;
   color: var(--bg-dark);
-  letter-spacing: -0.018em;
-  max-width: 740px;
+  letter-spacing: -0.012em;
+  max-width: 760px;
   margin: var(--s-7) auto 0;
-  line-height: 1.35;
-  padding: var(--s-6) var(--s-5);
-  background: linear-gradient(135deg, rgba(245,184,46,0.10), rgba(27,14,72,0.04));
-  border-left: 4px solid var(--gold);
-  border-radius: 0 var(--r-md) var(--r-md) 0;
-  text-align: left;
+  line-height: 1.4;
 }
-.nmm-2026 .manifesto .frase em {
-  font-style: normal;
+.nmm-2026 .orientando-cta strong {
   color: var(--gold-deep);
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .nmm-2026 .orientando-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 640px; }
+}
+@media (max-width: 480px) {
+  .nmm-2026 .orientando-grid { grid-template-columns: 1fr; max-width: 360px; gap: 14px; }
 }
 
 /* ==========================================================================
@@ -1988,12 +2009,26 @@ body.page-id-4131 .page-title {
   </div>
 </section>
 
-<!-- ===== MANIFIESTO ===== -->
-<section class="manifesto">
+<!-- ===== ORIENTANDO EL RUMBO DEL AGRO ===== -->
+<section class="orientando">
   <div class="container">
-    <p class="eyebrow" style="margin-bottom:24px">Manifiesto</p>
-    <h2>Hoy el productor no está fallando <span class="strike">por falta de productos.</span><br>Está fallando por <span class="accent">falta de dirección clara.</span></h2>
-    <p class="lead">Demasiadas opciones. Clima cambiante. Presión creciente de malezas. El resultado: decisiones desordenadas y lotes perdidos. Este año proponemos algo distinto.</p>
+    <p class="eyebrow">Manifiesto</p>
+    <h2 class="orientando-title">Orientando el rumbo del agro</h2>
+    <div class="orientando-grid">
+      <figure class="o-card" data-c="N">
+        <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/manifesto-cards/card-norte.webp" alt="La resistencia nos recuerda que el control empieza con conocimiento" loading="lazy">
+      </figure>
+      <figure class="o-card" data-c="S">
+        <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/manifesto-cards/card-sur.webp" alt="Las malezas difíciles exigen mirar el campo con nuevas decisiones" loading="lazy">
+      </figure>
+      <figure class="o-card" data-c="E">
+        <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/manifesto-cards/card-este.webp" alt="La estrategia se orienta hacia un control más preciso desde el barbecho" loading="lazy">
+      </figure>
+      <figure class="o-card" data-c="O">
+        <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/manifesto-cards/card-oeste.webp" alt="El manejo de malezas resistentes empieza con mejores decisiones" loading="lazy">
+      </figure>
+    </div>
+    <p class="orientando-cta">Hoy el productor no necesita más opciones.<br>Necesita una <strong>dirección más clara.</strong></p>
   </div>
 </section>
 
@@ -2508,7 +2543,7 @@ body.page-id-4131 .page-title {
   if (!prefersReduced) {
     const groups = [
       { sel: '.hero .hero-logo, .hero .date-block, .hero .cta-row, .hero .stats, .hero .countdown', stagger: 110 },
-      { sel: '.manifesto .head > *, .manifesto .quote', stagger: 100 },
+      { sel: '.orientando .eyebrow, .orientando-title, .o-card, .orientando-cta', stagger: 100 },
       { sel: '.cardinales .head > *, .cardinales .card', stagger: 90 },
       { sel: '.registro .form-card', stagger: 0 },
       { sel: '.faq .head > *, .faq-item', stagger: 60 },
