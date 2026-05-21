@@ -1053,6 +1053,12 @@ body.page-id-4131 .page-title {
 .nmm-2026 .card .speaker .country {
   font-size: 12px; color: var(--text-3); margin-top: 2px;
 }
+.nmm-2026 .card .speaker .country .flag {
+  width: 22px !important; height: 15px !important;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
 
 /* ==========================================================================
    SPEAKERS — stacked alternados full-width, alternancia color fondo
@@ -1110,11 +1116,12 @@ body.page-id-4131 .page-title {
 .nmm-2026 .photo-col .photo-frame {
   position: relative;
   width: 100%;
-  max-width: 340px;
+  max-width: 440px;
   aspect-ratio: 1 / 1;
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--bg-soft);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
 }
 .nmm-2026 .photo-col .photo-frame img {
   width: 100%; height: 100%;
@@ -1172,11 +1179,26 @@ body.page-id-4131 .page-title {
   font-weight: 500;
 }
 .nmm-2026 .info-col .country {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-2);
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 14px 6px 6px;
   margin-bottom: var(--s-5);
-  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,0,0,0.04);
+  border-radius: var(--r-full);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.nmm-2026 .info-col .country .flag {
+  width: 40px; height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  flex-shrink: 0;
+}
+.nmm-2026 .speaker-block:nth-of-type(even) .info-col .country {
+  background: rgba(255,255,255,0.10);
+  color: var(--text-inv);
 }
 .nmm-2026 .info-col .bio {
   font-size: 17px;
@@ -1777,11 +1799,11 @@ body.page-id-4131 .page-title {
     justify-items: center;
     gap: 12px;
   }
-  .nmm-2026 .speakers .speaker-block .photo-col { width: 100%; max-width: 200px; margin: 0 auto; }
-  .nmm-2026 .speakers .speaker-block .photo-frame { max-width: 200px; }
+  .nmm-2026 .speakers .speaker-block .photo-col { width: 100%; max-width: 280px; margin: 0 auto; }
+  .nmm-2026 .speakers .speaker-block .photo-frame { max-width: 280px; }
   .nmm-2026 .speakers .speaker-block .photo-frame img { aspect-ratio: 1/1; object-fit: cover; }
   .nmm-2026 .speakers .speaker-block .info-col { width: 100%; max-width: 320px; margin: 0 auto; }
-  .nmm-2026 .speakers .speaker-block .country { justify-content: center; font-size: 12px; }
+  .nmm-2026 .speakers .speaker-block .country { justify-content: center; font-size: 14px; }
   .nmm-2026 .speakers .info-col .role { font-size: 10px; letter-spacing: 0.14em; }
   .nmm-2026 .speakers .info-col h3 {
     font-size: clamp(18px, 5vw, 22px);
@@ -1935,7 +1957,7 @@ body.page-id-4131 .page-title {
   </div>
   <div class="container">
     <h1 class="sr-only">7° Congreso Internacional No Más Malezas 2026 — MAINTER</h1>
-    <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Logo%20Ok/b/1x/Recurso%2015.png" alt="7mo Congreso Internacional No Más Malezas — Orientando el rumbo del Agro">
+    <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/Logo%20Evento%20Final/logo-final-v2.png" alt="7° Congreso Internacional No Más Malezas">
     <div class="date-block">
       <div class="date">01 · 06 · 2026</div>
       <div class="place">SANTA CRUZ DE LA SIERRA · BOLIVIA</div>
@@ -2001,7 +2023,7 @@ body.page-id-4131 .page-title {
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pablo-franco-600.webp" alt="Pablo Franco">
           <div>
             <div class="name">Pablo Franco</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%201.png" alt="" width="22" height="22"> Bolivia</div>
+            <div class="country"><img class="flag" src="https://flagcdn.com/w160/bo.png" alt="Bandera de Bolivia" width="40" height="28" loading="lazy"> Bolivia</div>
           </div>
         </div>
       </a>
@@ -2016,7 +2038,7 @@ body.page-id-4131 .page-title {
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/pedro-christoffoleti-600.webp" alt="Pedro Christoffoleti">
           <div>
             <div class="name">Dr. Pedro Christoffoleti</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%206.png" alt="" width="22" height="22"> Brasil</div>
+            <div class="country"><img class="flag" src="https://flagcdn.com/w160/br.png" alt="Bandera de Brasil" width="40" height="28" loading="lazy"> Brasil</div>
           </div>
         </div>
       </a>
@@ -2031,7 +2053,7 @@ body.page-id-4131 .page-title {
           <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/lucas-paterlini-600.webp" alt="Lucas Paterlini">
           <div>
             <div class="name">Ing. Lucas Paterlini</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%205.png" alt="" width="22" height="22"> Argentina</div>
+            <div class="country"><img class="flag" src="https://flagcdn.com/w160/ar.png" alt="Bandera de Argentina" width="40" height="28" loading="lazy"> Argentina</div>
           </div>
         </div>
       </a>
@@ -2043,10 +2065,10 @@ body.page-id-4131 .page-title {
         <div class="cardinal-name">Oeste</div>
         <h3>Resistentes en Paraguay</h3>
         <div class="speaker">
-          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/paraguay-placeholder-600.webp" alt="Marco Mendoza">
+          <img src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/oradores/perfiles/marco-mendoza-600.webp" alt="Marco Mendoza">
           <div>
             <div class="name">Ing. Marco Mendoza, PhD</div>
-            <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%204.png" alt="" width="22" height="22"> Paraguay</div>
+            <div class="country"><img class="flag" src="https://flagcdn.com/w160/py.png" alt="Bandera de Paraguay" width="40" height="28" loading="lazy"> Paraguay</div>
           </div>
         </div>
       </a>
@@ -2194,7 +2216,7 @@ body.page-id-4131 .page-title {
       <div class="info-col">
         <span class="role">1° · Este · Barbecho</span>
         <h3>Dr. Pedro Christoffoleti</h3>
-        <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%206.png" alt="" width="22" height="22"> Brasil</div>
+        <div class="country"><img class="flag" src="https://flagcdn.com/w160/br.png" alt="Bandera de Brasil" width="40" height="28" loading="lazy"> Brasil</div>
         <p class="bio">Especialista en manejo de malezas. Referente internacional cuyos protocolos de barbecho aplican miles de productores en toda Sudamérica.</p>
         <span class="meta"><span class="dot"></span>Disertación: Manejo y control estratégico de malezas en Barbecho</span>
       </div>
@@ -2207,7 +2229,7 @@ body.page-id-4131 .page-title {
       <div class="info-col">
         <span class="role">2° · Sur · Pre-emergente</span>
         <h3>Ing. Lucas Paterlini</h3>
-        <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%205.png" alt="" width="22" height="22"> Argentina</div>
+        <div class="country"><img class="flag" src="https://flagcdn.com/w160/ar.png" alt="Bandera de Argentina" width="40" height="28" loading="lazy"> Argentina</div>
         <p class="bio">Asesor privado especialista en manejo de malezas difíciles. Traduce ciencia avanzada en decisiones simples para el productor en campo.</p>
         <span class="meta"><span class="dot"></span>Disertación: Manejo de Herbicidas Pre-emergentes</span>
       </div>
@@ -2232,7 +2254,7 @@ body.page-id-4131 .page-title {
       <div class="info-col">
         <span class="role">3° · Oeste · Resistentes</span>
         <h3>Ing. Marco Mendoza, PhD</h3>
-        <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%204.png" alt="" width="22" height="22"> Paraguay</div>
+        <div class="country"><img class="flag" src="https://flagcdn.com/w160/py.png" alt="Bandera de Paraguay" width="40" height="28" loading="lazy"> Paraguay</div>
         <p class="bio">Responsable de Desarrollo de Mercado de FMC en Paraguay. Experiencia regional en control de malezas resistentes y estrategias de rescate de cultivos.</p>
         <span class="meta"><span class="dot"></span>Disertación: Malezas resistentes en Paraguay</span>
       </div>
@@ -2245,7 +2267,7 @@ body.page-id-4131 .page-title {
       <div class="info-col">
         <span class="role">4° · Norte · Resistentes</span>
         <h3>Ing. Agr. M.Sc. Pablo Franco</h3>
-        <div class="country"><img class="flag" src="https://cdn.jsdelivr.net/gh/shera88/nomas-malezas-2026@main/Ilustrator/elementos/Logos%20ok/Recurso%201.png" alt="" width="22" height="22"> Bolivia</div>
+        <div class="country"><img class="flag" src="https://flagcdn.com/w160/bo.png" alt="Bandera de Bolivia" width="40" height="28" loading="lazy"> Bolivia</div>
         <p class="bio">Especialista boliviano en control de malezas. Experiencia local con poblaciones resistentes y estrategias adaptadas al lote nacional.</p>
         <span class="meta"><span class="dot"></span>Disertación: Malezas resistentes en Bolivia</span>
       </div>
