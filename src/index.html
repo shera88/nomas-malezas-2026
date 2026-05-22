@@ -2404,7 +2404,8 @@ body.page-id-4131 .page-title {
   const root = document.querySelector('.nmm-2026');
   if (!root) return;
 
-  const WEBHOOK_URL = 'https://imaginarte-n8n.rgxmhp.easypanel.host/webhook/nmm-registro';
+  // Endpoint Vercel Edge: INSERT directo a Supabase (~600ms) + fire-forget n8n
+  const WEBHOOK_URL = 'https://nmm-admin-app.vercel.app/api/registro-publico';
 
   // Campo dinámico según tipo
   const labels = {
