@@ -2403,8 +2403,40 @@ body.page-id-4131 .page-title {
   const root = document.querySelector('.nmm-2026');
   if (!root) return;
 
-  // Endpoint Vercel Edge: INSERT directo a Supabase (~600ms) + fire-forget n8n
-  const WEBHOOK_URL = 'https://nmm-admin-app.vercel.app/api/registro-publico';
+  // Dual fallback: VPS EasyPanel primary, Vercel Edge backup.
+  // Ambos endpoints insertan a misma Supabase + triggerean n8n.
+  const WEBHOOK_ENDPOINTS = [
+    'https://imaginarte-nmm-admin.rgxmhp.easypanel.host/api/registro-publico',
+    'https://nmm-admin-app.vercel.app/api/registro-publico'
+  ];
+
+  async function postWithFallback(payload) {
+    let lastErr;
+    for (const url of WEBHOOK_ENDPOINTS) {
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload),
+          signal: AbortSignal.timeout(8000)
+        });
+        if (res.status >= 400 && res.status < 500) {
+          const data = await res.json().catch(() => ({}));
+          const e = new Error('validation');
+          e.validation = true;
+          e.data = data;
+          throw e;
+        }
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return await res.json();
+      } catch (err) {
+        if (err && err.validation) throw err;
+        console.warn('[NMM] endpoint failed, trying next:', url, err);
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error('all_endpoints_failed');
+  }
 
   // Campo dinámico según tipo
   const labels = {
@@ -2494,13 +2526,7 @@ body.page-id-4131 .page-title {
     };
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
+      const data = await postWithFallback(payload);
       showSuccess(data);
     } catch (err) {
       submitBtn.disabled = false;
